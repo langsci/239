@@ -4,8 +4,8 @@
 
 - Editors: Sabine Schulte im Walde & Eva Smolka
 - Publication Date: not yet published
-- Series: Studies in Diversity Linguistics 
-- Volume: 
+- Series: Phraseology and Multiword Expressions 
+- Volume: 4
 
 ## Description
 
@@ -15,7 +15,7 @@
 
 ## License
 
-Copyright: (c) 2018, the authors.
+Copyright: (c) 2019, the authors.
 
 All data, code and documentation in this repository is published under the
 [Creative Commons Attribution 4.0 Licence](http://creativecommons.org/licenses/by/4.0/)
