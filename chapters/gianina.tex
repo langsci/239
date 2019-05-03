@@ -1,9 +1,9 @@
 \documentclass[output=paper]{langsci/langscibook} 
 
 %%%%%%%%%%%%%AUTHOR'S PACKAGES%%%%%%%%%%%%%%
-\usepackage{array,multirow,graphicx}
-\usepackage{enumitem}
-\usepackage[english]{babel}
+% % \usepackage{array,multirow,graphicx}
+% % \usepackage{enumitem}
+% % % \usepackage[english]{babel}
 %\usepackage{forest}
 % \forestset{%
 %   syll/.style={%
@@ -35,7 +35,7 @@
 %%% Alternative definition to have the remarks
 %%% in the margins instead of footnotes
 %\usepackage{todonotes}
-\setlength{\marginparwidth}{2cm}
+% \setlength{\marginparwidth}{2cm}
 %\makeatletter
 %\setremarkmarkup{\todo[color=Changes@Color#1!20,size=\scriptsize]{#1: #2}}
 %\makeatother
@@ -44,37 +44,29 @@
 %% by riding on  
 %\newcommand{\note}[2][]{ [#1,remark={#2}]{}}
 
-\hyphenation{Pai-ra-mi-dis}
+% % % \hyphenation{Pai-ra-mi-dis}
 
-\title{Compositionality in English Deverbal Compounds: The Role of the Head} 
+%  [id=LvdP,remark={Link to issue in reviewers' file, for example 2C}]{Text you added}\\
+% \replaced[id=GI, remark={Link to issue in reviewers' file, e.g. 2C}]{New text.}{Old text you replaced.}\\ 
+% \deleted[id=GJ, remark={Link to issue in reviewers' file, e.g. 2C}]{Text you deleted.}
+% \note[id=GJ]{Note that should appear at margin.}
 
 
+\title{Compositionality in English deverbal compounds: The role of the head} 
 
-\author{%
-Gianina Iord\u{a}chioaia\affiliation{University of Stuttgart}\and 
-Lonneke van der Plas\affiliation{University of Malta}\lastand 
-Glorianna Jagfeld\affiliation{University of Stuttgart}
-}
+\author{Gianina Iordăchioaia\affiliation{University of Stuttgart}\and Lonneke van der Plas\affiliation{University of Malta}\lastand Glorianna Jagfeld\affiliation{University of Stuttgart}}
 
 % \chapterDOI{} %will be filled in at production
 % \epigram{}
 
 \abstract{This paper is concerned with the compositionality of deverbal compounds such as \textit{budget assessment} in English. We present an interdisciplinary study on how the morphosyntactic properties of the deverbal noun head (e.g., \textit{assessment})  can predict the interpretation of the compound, as mediated by the syntactic-semantic relationship  between the non-head (e.g., \textit{budget}) and the head. 
-We start with \citeauthor{grimshaw:90}'s~(\citeyear{grimshaw:90}) observation that deverbal nouns are ambiguous between compositionally interpreted Argument Structure Nominals, which  inherit verbal structure and realize arguments (e.g., \textit{the \textbf{assessment} \uline{of the budget} \uline{by the government}}), and more lexicalized Result Nominals,  which preserve no verbal properties or arguments (e.g., \textit{The \textbf{assessment} is on the table}). Our hypothesis is that deverbal compounds with Argument Structure Nominal heads are fully compositional and, in our system, more easily predictable than those headed by Result Nominals, since their compositional make-up triggers an (unambiguous) object interpretation of the non-heads.\ 
-Linguistic evidence gathered from corpora and human annotations, and evaluated with machine learning techniques supports this hypothesis. At the same time, it raises interesting discussion points on how different properties of the head contribute to the interpretation of the deverbal compound.}
-
-
+We start with \citeauthor{grimshaw:90}'s (\citeyear{grimshaw:90}) observation that deverbal nouns are ambiguous between compositionally interpreted Argument Structure Nominals, which  inherit verbal structure and realize arguments (e.g., \textit{the \textbf{assessment} \uline{of the budget} \uline{by the government}}), and more lexicalized Result Nominals,  which preserve no verbal properties or arguments (e.g., \textit{The \textbf{assessment} is on the table}). Our hypothesis is that deverbal compounds with Argument Structure Nominal heads are fully compositional and, in our system, more easily predictable than those headed by Result Nominals, since their compositional make-up triggers an (unambiguous) object interpretation of the non-heads.\\Linguistic evidence gathered from corpora and human annotations, and evaluated with machine learning techniques supports this hypothesis. At the same time, it raises interesting discussion points on how different properties of the head contribute to the interpretation of the deverbal compound.}
 
 \begin{document}
 
 \maketitle
 
 \section{Introduction}\label{sec:intro} 
-
-%  [id=LvdP,remark={Link to issue in reviewers' file, for example 2C}]{Text you added}\\
-% \replaced[id=GI, remark={Link to issue in reviewers' file, e.g. 2C}]{New text.}{Old text you replaced.}\\ 
-% \deleted[id=GJ, remark={Link to issue in reviewers' file, e.g. 2C}]{Text you deleted.}
-% \note[id=GJ]{Note that should appear at margin.}
 
 This paper contributes a study on how constituents influence the compositionality of multiword expressions from the perspective of deverbal compounds in English with a focus on the role of their head nouns. 
 
@@ -83,8 +75,8 @@ DCs are noun-noun compounds, whose head is deverbal, as illustrated in (\ref{1})
 
 
 \begin{exe}
-\ex\label{1}
-{\begin{xlist}
+\ex{\label{1}
+\begin{xlist}
 \ex{\textit{budget} assess\textbf{ment} -- to assess (a) \textit{budget}(s) \hfill (Object)}
 \ex{\textit{police} question\textbf{ing} -- \textit{police} questions sb.\  \hfill (Subject)}
 \ex{\textit{college} educat\textbf{ion} -- to educate sb.\ in \textit{college} \hfill (Adjunct)}
@@ -990,11 +982,6 @@ so do we attribute the non-compositionality in the relation between head and com
 
 Furthermore, \cite{SchulteImWaldeEtAl:16} emphasize the importance of properties of the head and the compound, and to a lesser extent of the modifier (i.e., non-head) for the prediction of the  transparency of the compound.  The authors stress the need to carefully balance  datasets according to the empirical and semantic properties of the compounds, as well as of their heads. We have balanced our data set for corpus frequency of the head   and measured the family size of the heads. We have not measured  other properties that they have used, but will consider these in future work. 
 
-
-
-
-
-
 \section{Conclusions}\label{sec:conclusions}
 
 In this paper we have presented a study on the  {(syntactic)} compositionality of DCs, as predictable from the morphosyntactic properties of their head nouns. We have employed theoretical insights on the behavior of deverbal nominals, on the basis of which we collected corpus data, as well as manual annotations. We used this data collection in the form  of indicative features in a logistic regression model, by means of which we evaluated the prediction power of each feature for the OBJ (vs.~NOBJ) interpretation of the compounds. 
@@ -1011,16 +998,14 @@ By comparison to the previous NLP work on  {the transparency of (root)} compound
 
 \section*{Abbreviations}
 ASN -- Argument Structure Nominal; CL -- Computational Linguistics; DC -- Deverbal Compound; DS -- Distributional Semantics; IAA -- inter-annotator agreement; NLP -- Natural Language Processing; \textit{P-R} -- \textit{process-vs-result} feature; PoC -- Principle of Compositionality; POS -- Part of Speech; RC -- Root Compound; RN -- Result Nominal; TL -- Theoretical Linguistics.
+
 \section*{Acknowledgements}
 We are grateful to Katherine Fraser, Bethany Lochbihler and Whitney Frazier Peterson for annotating our database, to Kerstin Eckart and the INF project in the SFB 732 for important technical support, and to Alla Abrosimova for help with further technical details. This research has been funded by the German Research Foundation (DFG) via a grant offered to the Projects B1 \textit{The Form and Interpretation of Derived Nominals} and D11 \textit{A Crosslingual Approach to the Analysis of Compound Nouns}, as part of the SFB 732 \textit{Incremental Specification in Context} at the University of Stuttgart.
 
 
 % Bibliography:
 
-{\sloppy
-\printbibliography[heading=subbibliography,notkeyword=this]
-}
+{\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
 
 
 \end{document}
-
