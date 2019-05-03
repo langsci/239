@@ -145,18 +145,16 @@ Some idiomatic expressions, however, may be partially compositional. For instanc
 
 \begin{exe}
   \ex{\label{tree}
-    \begin{center}
-      \includegraphics[width=0.55\linewidth]{figures/ex_forest}
-    \end{center}
-% \begin{forest}%syll
-% [VoiceP
-% [DP[The government]]
-% [VP
-% [V[assessed]]
-% [DP[the budget]]
-% ]
-% ]
-% \end{forest}
+%       \includegraphics[width=0.55\linewidth]{figures/ex_forest}
+\begin{forest}%syll
+[VoiceP
+[DP[The government]]
+[VP
+[V[assessed]]
+[DP[the budget]]
+]
+]
+\end{forest}
 }
 \end{exe}
 
@@ -187,7 +185,7 @@ However, if the DC is interpreted compositionally (in parallel to the verbal con
 
 
 
-\paragraph*{Terminology}
+\subsection{Terminology}\todo{I inserted this subsection since \textbackslash paragraphs are not allowed}
  Before we introduce our research program, a few terminological clarifications are in place. The term \textit{compositionality} is often used without particular focus on the syntactic-semantic relationship between the parts of the complex expression, an aspect that is of crucial importance in our study. Natural Language Processing literature on (root) noun-noun compounds, for instance, occasionally speaks of \textit{compositionality ratings}, in which annotators evaluate how accessible the lexical meaning of the two nouns is in the overall meaning of the compound (see \sectref{sec:NLP:lit:compositional} for details and references). This notion of compositionality is similar to what we call below \textit{lexico-semantic transparency}.
 
  A notion of \textit{compositionality} that is closer to ours appears in some Distributional Semantics (DS) approaches, which, in view of the PoC in (\ref{3}), seek to identify linguistically-informed composite functions to combine the individual parts of complex expressions (e.g., \cite{marelli:baroni:15,baroni:zamparelli:10}). Like us, these authors take a closer look at the relationship between the parts; however, their focus is more on the technical implementation (i.e., the DS correspondent of function application from theoretical linguistics) rather than on the linguistically relevant constraints that are at play. Although we share the interest in the relationship between the parts with this literature, we are not concerned with the technical details of the function, but with how this relationship interacts with other morphosyntactic properties of the head, as explained in \sectref{sec:intro:contribution}.
@@ -238,18 +236,17 @@ Noteworthily, in theoretical studies the problem of compositionality in DCs is n
 \tabref{tab:1:ASN:RN} is a summary of the main contrastive properties of ASNs (vs.~RNs) from \cite{grimshaw:90} that are relevant for our study, adapted from \citet[3]{alexiadou:grimshaw:08}.\  These properties are positively specified for ASNs only, since RNs behave like non-derived lexical nouns and do not present any such particularities. The reasoning is that ASNs have  verbal properties (i.e., event structure as in (\ref{tree})), which will impose restrictions on their nominal behavior (e.g., must  appear in the singular) or make them compatible with verb-specific modifiers (e.g., aspectual adverbials).
 
 \begin{table}
-\caption{Morphosyntactic properties of ASNs vs.\ RNs }
-\label{tab:1:ASN:RN}
-\begin{tabular}{|l|l|l|l|}
-\hline & \textbf{Morphosyntactic property} & \textbf{ASN} & \textbf{RN}\\ \hline
-i. & Obligatory object arguments realized as \textit{of}-phrases & Yes & No \\ \hline
-ii. & Agent-oriented modifiers (\textit{deliberate}, \textit{intentional}, \textit{careful}) & Yes & No\\ \hline
+\caption{Morphosyntactic properties of ASNs vs.\ RNs\label{tab:1:ASN:RN}}
+\begin{tabular}{llcc}
+\lsptoprule
+& Morphosyntactic property & ASN & RN\\\midrule
+i. & Obligatory object arguments realized as \textit{of}-phrases & Yes & No \\ 
+ii. & Agent-oriented modifiers (\textit{deliberate}, \textit{intentional}, \textit{careful}) & Yes & No\\ 
 iii. & \textit{By}-phrases are (subject) arguments &Yes & No\\ 
-\hline
-iv. & Aspectual \textit{in}/\textit{for-X-time} adverbials & Yes & No\\ \hline
-v. &  \textit{Frequent}, \textit{constant} appear with singular & Yes & No\\ \hline
+iv. & Aspectual \textit{in}/\textit{for-X-time} adverbials & Yes & No\\ 
+v. &  \textit{Frequent}, \textit{constant} appear with singular & Yes & No\\ 
 vi. & Must appear in the singular & Yes & No\\
-\hline
+\lspbottomrule
 \end{tabular}
 \end{table}
 
@@ -443,16 +440,16 @@ We also excluded deverbal nouns based on the suffixes~\mbox{\textit{-er}} and~\m
 The nouns were selected such that their base verbs present transitive uses, making both subjects and objects available.\footnote{\textit{Arrive} is the only intransitive unaccusative verb that we used, which realizes the object/internal argument as a subject.} For illustration, \tabref{tab:2:nouns} offers  samples of deverbal nouns per each frequency range and suffix.\ For each such selected noun we then extracted the 25 most frequent compounds that they appeared as heads of, where available. A few deverbal nouns (in particular those with suffixes~\mbox{\textit{-al}} and~\mbox{\textit{-ance}}) were less productive in compounds and appeared with fewer than 25 different non-heads. Given these gaps and after removing a few repetitions due to capitalization, we obtained a collection of 3111 DCs.
 
 
-\begin{table}\caption{\label{tab:2:nouns} Samples of extracted deverbal nouns}
-{\footnotesize\begin{tabular}{|p{1.3cm}|l|l|l|l|l|}
-\hline
- Frequency & AL & ANCE & (AT)ION & ING & MENT \\ \hline
+\begin{table}
+\caption{\label{tab:2:nouns}Samples of extracted deverbal nouns}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\lsptoprule  Frequency & AL & ANCE & (AT)ION & ING & MENT \\ \midrule
 %&spending & production & enforcement & proposal & insurance\\
 High & approval & performance & protection & building & development \\
 & withdrawal & assistance & reduction & training  & movement \\
 %& bombing & construction & treatment & arrival & clearance\\
 & rental & surveillance & consumption & trafficking  & punishment \\
-\hline
+\midrule
 % hearing & education & announcement & rehearsal & allowance\\
 % laundering & exploration & payment & removal & maintenance\\
 % testing & creation & imprisonment & disposal & resistance\\
@@ -468,13 +465,13 @@ Medium  & renewal & assurance & supervision & killing  & deployment\\
 %%growing & preservation & harassment & referral & acquaintance\\
 %breaking & authorization & recruitment & refusal & inheritance\\
 %learning & assassination & endorsement & deferral & resemblance\\
-\hline
+\midrule
 Low & retrieval & defiance & demolition & weighting & reinforcement \\
 %&baking & anticipation & realignment & acquittal & reassurance\\
  & disapproval & endurance & expulsion & chasing  & empowerment\\
 %& measuring & obstruction & mistreatment & rebuttal & remembrance\\
  & dispersal & ignorance & deportation & mongering & abandonment\\ 
-\hline
+\lspbottomrule
 \end{tabular}}
 \end{table}
 
@@ -513,27 +510,22 @@ To collect information on the morphosyntactic properties of the head nouns in DC
 
 
 
-\begin{table}\caption{\label{tab:3:features} Indicative features for head nouns}
-{\footnotesize \begin{tabular}{|l|l|}
-\hline  \textbf{Feature label} & \textbf{Description and illustration}\\ \hline
-1.\ \textit{{\em of}\_outside\_DC} & Percentage of the head's occurrences as singular  outside compounds  \\ \citep{grimshaw:90}  & which realize a  syntactic relation with an \textit{of}-phrase. \\ & e.g., \textit{assignment \textbf{of} problems}\\ \hline
-2.\ \textit{{\em by}\_outside\_DC} & Percentage of the head's occurrences in the singular  outside compounds  \\ \citep{grimshaw:90} &  which realize a  syntactic relation with a \textit{by}-phrase.\\ &   e.g., \textit{assignment (of problems) \textbf{by} teachers}\\ \hline
-3.\ \textit{sum\_adjectives} & Percentage of the head's occurrences in a modifier relation with one \\ \citep{grimshaw:90}  &  of the adjectives \textit{frequent},  \textit{constant}, \textit{intentional}, \textit{deliberate}, or \textit{careful}.\\ 
-\hline
-4.\ \textit{sg\_outside\_DC} &  Percentage of the head's occurrences as singular outside compounds.\\ 
-\citep{grimshaw:90} &\\
-\hline
-\hline
-5.\ \textit{{\em by}\_inside\_DC} & Percentage of the head's occurrences as singular inside compounds  \\ ($\approx$ 2.~\textit{{\em by}\_outside\_DC}) & which realize a  syntactic relation with a \textit{by}-phrase.\\  &  e.g., \textit{task assignment \textbf{by} teachers}\\ \hline
-6.\ \textit{sg\_inside\_DC} & Percentage of the head's occurrences as singular inside compounds.\\ 
-($\approx$ 4.~\textit{sg\_outside\_DC}) & \\ \hline
-7.\ \textit{process-vs-result}& Native speaker annotation of each DC as a process (\textit{car driving}) or  \\ ($\approx$ ASN vs.~RN) & result (\textit{apartment building})  on a scale from 5 to 1.\\
-\hline
-\hline 
-8.\ \textit{suffix} & Suffix of the head noun: AL (rent\textbf{al}), ANCE (insur\textbf{ance}),\\ NEW & 
-ING (kill\textbf{ing}), ION (destruct\textbf{ion}), MENT (treat\textbf{ment})\\ \hline
-9.\ \textit{head\_in\_DC} & Percentage of the head's occurrences within a compound out of its \\  NEW &  total occurrences in the corpus.\\ \hline
-\end{tabular}}
+\begin{table}
+\caption{\label{tab:3:features}Indicative features for head nouns}
+\begin{tabularx}{\textwidth}{p{3.25cm}Q}
+\lsptoprule
+Feature label & Description and illustration\\ \midrule
+1.\ \textit{{\em of}\_outside\_DC}\newline\citep{grimshaw:90} & Percentage of the head's occurrences as singular outside compounds  which realize a  syntactic relation with an \textit{of}-phrase. E.g., \textit{assignment \textbf{of} problems}\\ \tablevspace
+2.\ \textit{{\em by}\_outside\_DC}\newline\citep{grimshaw:90} & Percentage of the head's occurrences in the singular outside compounds  which realize a  syntactic relation with a \textit{by}-phrase. E.g., \textit{assignment (of problems) \textbf{by} teachers}\\ \tablevspace
+3.\ \textit{sum\_adjectives}\newline\citep{grimshaw:90} & Percentage of the head's occurrences in a modifier relation with one  of the adjectives \textit{frequent},  \textit{constant}, \textit{intentional}, \textit{deliberate}, or \textit{careful}.\\ 
+\tablevspace
+4.\ \textit{sg\_outside\_DC}\newline\citep{grimshaw:90} &  Percentage of the head's occurrences as singular outside compounds.\\\tablevspace
+5.\ \textit{{\em by}\_inside\_DC}\newline($\approx$ 2.~\textit{{\em by}\_outside\_DC}) & Percentage of the head's occurrences as singular inside compounds which realize a  syntactic relation with a \textit{by}-phrase. E.g., \textit{task assignment \textbf{by} teachers}\\ \tablevspace
+6.\ \textit{sg\_inside\_DC}\newline($\approx$ 4.~\textit{sg\_outside\_DC}) & Percentage of the head's occurrences as singular inside compounds.\\\tablevspace
+7.\ \textit{process-vs-result}\newline($\approx$ ASN vs.~RN) & Native speaker annotation of each DC as a process (\textit{car driving}) or result (\textit{apartment building})  on a scale from 5 to 1.\\\tablevspace
+8.\ \textit{suffix}\newline NEW & Suffix of the head noun: AL (rent\textbf{al}), ANCE (insur\textbf{ance}), ING (kill\textbf{ing}), ION (destruct\textbf{ion}), MENT (treat\textbf{ment})\\\tablevspace
+9.\ \textit{head\_in\_DC}\newline NEW & Percentage of the head's occurrences within a compound out of its total occurrences in the corpus.\\ \lspbottomrule
+\end{tabularx}
 \end{table}
 
 
@@ -568,7 +560,7 @@ We determined the grammatical number of a noun or compound by its POS~tag or the
 For example, we matched \emph{security training(s)}, but not \emph{airport security training} and \emph{security training instructor}, to make sure that we do not extract parts of larger compounds. Conversely,  the \textit{outside\_DC} features apply to head nouns (matched by their lemma and POS~tag NN or NNS) without any noun or proper noun next to them.
 
 
-\begin{figure}[h!tb]
+\begin{figure}[h]
     %\begin{subfigure}[c]{1.0\textwidth}
     		\begin{tikzpicture}
 		\tikzstyle{normal node} = [text centered, text height=1.5ex,text depth=.25ex]
@@ -599,7 +591,7 @@ For example, we matched \emph{security training(s)}, but not \emph{airport secur
         %\node[normal node, below=0.1 of 10] (21) {NN};
 		
         % dependency
-		\draw[->, line width=.5] (10) to  [out=-300,in=-280, looseness=.2] node[above, font=\tiny]{$prep\_of$} (3);
+		\draw[-{Triangle[]}, line width=.5] (10) to  [bend right=90, looseness=.3] node[above, font=\small]{\textit{prep\_of}} (3);
 		\end{tikzpicture}
 	%\subcaption{Compound + \textit{of-phrase}}
     %\end{subfigure}
@@ -627,7 +619,7 @@ For example, we matched \emph{security training(s)}, but not \emph{airport secur
         %\node[normal node, below=0.1 of 7] (18) {NNS};
 		
         % dependency
-		\draw[->, line width=.5] (6) to  [out=-300,in=-280, looseness=.2] node[above, font=\tiny]{$prep\_by$} (3);
+		\draw[-{Triangle[]}, line width=.5] (6) to  [bend right=90, looseness=.5] node[above, font=\small]{\textit{prep\_by}} (3);
 		\end{tikzpicture}
 	%\subcaption{Compound + \textit{by-phrase}}
     %\end{subfigure}
@@ -638,7 +630,7 @@ For example, we matched \emph{security training(s)}, but not \emph{airport secur
 We counted a DC (or its head noun) as being in a syntactic relation with an \textit{of}-phrase or \textit{by}-phrase,  if it (or its head) governed a collapsed dependency labeled~\lq prep\_of\rq/\lq prep\_by\rq\footnote{By conflating dependencies involving prepositions or conjuncts, collapsed dependencies directly link content words.
 This simplifies the extraction patterns, as we can obtain the complement of the prepositional phrase depending on the noun or the DC, by following a single dependency arc.}, as in Figure~\ref{fig:patterns-compound-phrases}.
 Since we were  interested in prepositional phrases that realize internal or external arguments, but not in 
-temporal phrases (e.g., \lq by Monday\rq)~or fixed expressions (e.g., \lq of age\rq, \lq by chance\rq), we excluded phrases headed by words that typically appear in these undesired constructions. We semi-automatically compiled these lists based on a multiword expression lexicon\footnote{http://www.cs.cmu.edu/~ark/LexSem/} and manually added entries. To compute the feature \textit{sum\_adjectives} we counted how often each noun outside a DC governs a dependency relation labeled \lq amod\rq, where the dependent is an adjective (POS~tag JJ) out of the lemmas \textit{intentional, deliberate, careful, constant}, and \textit{frequent}.
+temporal phrases (e.g., \lq by Monday\rq)~or fixed expressions (e.g., \lq of age\rq, \lq by chance\rq), we excluded phrases headed by words that typically appear in these undesired constructions. We semi-automatically compiled these lists based on a multiword expression lexicon\footnote{\url{http://www.cs.cmu.edu/~ark/LexSem/}} and manually added entries. To compute the feature \textit{sum\_adjectives} we counted how often each noun outside a DC governs a dependency relation labeled \lq amod\rq, where the dependent is an adjective (POS~tag JJ) out of the lemmas \textit{intentional, deliberate, careful, constant}, and \textit{frequent}.
 
 
 
@@ -675,26 +667,28 @@ This proves that the combination of
 features driven by linguistic theory has strong predictive power. 
 
 \begin{table}
-\caption{\label{tab:individual}Percent accuracy for individual features. $\dagger$ indicates a statistically significant difference from the performance of all features.\ All results are statistically significant in comparison to the  baselines.}
-{\small \begin{tabular}{lc}
-\textbf{Features}&\textbf{Accuracy}\\
-\hline
-All features&\textbf{78.8}\%\\
-\textit{process-vs-result}&76.5\%\\
-\textit{suffix}&72.0\%$\dagger$\\
-\textit{sg\_outside\_DC}&68.9\%$\dagger$\\
-\textit{sg\_inside\_DC}&68.9\%$\dagger$\\
-\textit{head\_in\_DC}&66.7\%$\dagger$\\
-\textit{sum\_adjectives}&61.4\%$\dagger$\\
-\textit{of\_outside\_DC}&59.8\%$\dagger$\\
-\textit{by\_outside\_DC}& 56.0\%$\dagger$\\
-\textit{by\_inside\_DC} &54.5\%$\dagger$\\
-\textit{process-vs-result} and \textit{suffix} combined& 78.0\%\\
-\hline
- Random baseline&50.0\%\\
- Head frequency baseline&50.0\%\\
- Head family size baseline&46.8\%\\
-\end{tabular}}
+\caption{\label{tab:individual}Percent accuracy for individual features. ``†'' indicates a statistically significant difference from the performance of all features. All results are statistically significant in comparison to the baselines.}
+\begin{tabular}{lS[table-format=2.1,table-space-text-post=\textsuperscript{†}]}
+\lsptoprule
+Features & {Accuracy (\%)}\\
+\midrule
+All features&\bfseries 78.8\\
+\textit{process-vs-result}&76.5\\
+\textit{suffix}&72.0 \textsuperscript{†}\\
+\textit{sg\_outside\_DC}&68.9 \textsuperscript{†}\\
+\textit{sg\_inside\_DC}&68.9 \textsuperscript{†}\\
+\textit{head\_in\_DC}&66.7 \textsuperscript{†}\\
+\textit{sum\_adjectives}&61.4 \textsuperscript{†}\\
+\textit{of\_outside\_DC}&59.8 \textsuperscript{†}\\
+\textit{by\_outside\_DC}& 56.0 \textsuperscript{†}\\
+\textit{by\_inside\_DC} &54.5 \textsuperscript{†}\\
+\textit{process-vs-result} and \textit{suffix} combined& 78.0\\
+\midrule
+ Random baseline&50.0\\
+ Head frequency baseline&50.0\\
+ Head family size baseline&46.8\\
+ \lspbottomrule
+\end{tabular}
 \end{table}
 
 
@@ -706,42 +700,44 @@ Furthermore, the results for the individual features in Table~\ref{tab:individua
 Table~\ref{tab:ablation:3As} shows the results from the ablation experiments. Only the removal of features \textit{suffix, of\_outside\_DC}, and \textit{P-R} result in a significant drop in performance, which means that their contribution in addition to the other features is particularly important.  {Their performance together is not significantly higher than that of all features (cf.~80.3\% vs.~78.8\%).} 
 
 \begin{table}
-\caption{\label{tab:ablation:3As}Percent accuracy in ablation experiments. $\dagger$ indicates a statistically significant difference from the performance of all features.}
-{\small \begin{tabular}{lc}
-\textbf{Features}&\textbf{Accuracy}\\
-\hline
-All features&78.8\%\\
-All features, except \textit{sg\_inside\_DC}&\textbf{80.3}\%\\
-All features, except \textit{head\_in\_DC}&79.5\%\\
-All features, except \textit{sg\_outside\_DC}&78.8\%\\
-All features, except \textit{by\_inside\_DC} &78.8\%\\
-All features, except \textit{sum\_adjectives}& 78.8\%\\
-All features, except \textit{by\_outside\_DC}& 75.0\%\\
-All features, except \textit{suffix}&73.5\%$\dagger$\\
-All features, except \textit{of\_outside\_DC}&72.0\%$\dagger$\\
-All features, except \textit{P-R}&72.0\%$\dagger$\\
-\textit{P-R}, \textit{of\_outside\_DC}, \textit{suffix}, \textit{by\_outside\_DC} combined&\textbf{80.3\%}\\
-\end{tabular}}
+\caption{\label{tab:ablation:3As}Percent accuracy in ablation experiments. ``†'' indicates a statistically significant difference from the performance of all features.}
+\begin{tabular}{lS[table-format=2.1,table-space-text-post=\textsuperscript{†}]}
+\lsptoprule
+Features & {Accuracy (\%)}\\
+\midrule
+All features&78.8\\
+All features, except \textit{sg\_inside\_DC}&\bfseries 80.3\\
+All features, except \textit{head\_in\_DC}&79.5\\
+All features, except \textit{sg\_outside\_DC}&78.8\\
+All features, except \textit{by\_inside\_DC} &78.8\\
+All features, except \textit{sum\_adjectives}& 78.8\\
+All features, except \textit{by\_outside\_DC}& 75.0\\
+All features, except \textit{suffix}&73.5 \textsuperscript{†}\\
+All features, except \textit{of\_outside\_DC}&72.0 \textsuperscript{†}\\
+All features, except \textit{P-R}&72.0 \textsuperscript{†}\\
+\textit{P-R}, \textit{of\_outside\_DC}, \textit{suffix}, \textit{by\_outside\_DC} combined& \bfseries 80.3\\\lspbottomrule
+\end{tabular}
 \end{table}
 
 For the sake of comparison, Table~\ref{tab:ablation:noP-R} shows  the results of a model using corpus-based features only, i.e., the data does not include the \textit{P-R} feature that is based on human judgments. Like in Table~\ref{tab:ablation:3As}, we see that the features \textit{of\_outside\_DC} and \textit{suffix} are particularly important also in this model, since their absence triggers a significant drop in performance. In this model, however, the contribution of the feature \textit{by\_outside\_DC} also becomes significant, by contrast to the model in Table~\ref{tab:ablation:3As}, which included the \textit{P-R} feature.
 
 \begin{table}
-\caption{\label{tab:ablation:noP-R} Ablation experiment with corpus-based features only (no P-R). $\dagger$ indicates a statistically significant difference from the performance of all corpus-based features.}
-{\small \begin{tabular}{lc}
-\textbf{Features}&\textbf{Accuracy}\\
-\hline
-All corpus-based features&72.0\%\\
-All corpus-based features, except \textit{sg\_outside\_DC}&72.0\%\\
-All corpus-based features, except \textit{sum\_adjectives}&72.0\%\\
-All corpus-based features, except \textit{sg\_inside\_DC}&72.0\%\\
-All corpus-based features, except \textit{by\_inside\_DC}&72.0\%\\
-All corpus-based features, except \textit{head\_in\_DC} &68.2\%\\
-All corpus-based features, except \textit{suffix}&66.7\%$\dagger$\\
-All corpus-based features, except \textit{by\_outside\_DC}&59.1\%$\dagger$\\
-All corpus-based features, except \textit{of\_outside\_DC}& 54.5\%$\dagger$\\
-\textit{of\_outside\_DC}, \textit{by\_outside\_DC}, and \textit{suffix} combined& \textbf{72.7\%}\\
-\end{tabular}}
+\caption{\label{tab:ablation:noP-R}Ablation experiment with corpus-based features only (no P-R). ``†'' indicates a statistically significant difference from the performance of all corpus-based features.}
+\begin{tabular}{lS[table-format=2.1,table-space-text-post=\textsuperscript{†}]}
+\lsptoprule
+Features & {Accuracy (\%)}\\
+\midrule
+All corpus-based features&72.0\\
+All corpus-based features, except \textit{sg\_outside\_DC}&72.0\\
+All corpus-based features, except \textit{sum\_adjectives}&72.0\\
+All corpus-based features, except \textit{sg\_inside\_DC}&72.0\\
+All corpus-based features, except \textit{by\_inside\_DC}&72.0\\
+All corpus-based features, except \textit{head\_in\_DC} &68.2\\
+All corpus-based features, except \textit{suffix}&66.7 \textsuperscript{†}\\
+All corpus-based features, except \textit{by\_outside\_DC}&59.1 \textsuperscript{†}\\
+All corpus-based features, except \textit{of\_outside\_DC}& 54.5 \textsuperscript{†}\\
+\textit{of\_outside\_DC}, \textit{by\_outside\_DC}, and \textit{suffix} combined& \bfseries 72.7\\\lspbottomrule
+\end{tabular}
 \end{table}
 
 
@@ -750,9 +746,10 @@ Table~\ref{tab:prediction:all} shows the direction of the prediction of the feat
 
 \begin{table}
 \caption{\label{tab:prediction:all}Direction of prediction per feature in different models. Consistent values across studies in bold}
-{\small \begin{tabular}{lrrr}
-\textbf{Feature}&\textbf{\tabref{tab:individual}}&\textbf{\tabref{tab:ablation:3As}}&\textbf{\tabref{tab:ablation:noP-R}}\\
-\hline
+\begin{tabular}{lrrr}
+\lsptoprule
+{Feature}&{\tabref{tab:individual}}&{\tabref{tab:ablation:3As}}&{\tabref{tab:ablation:noP-R}}\\
+\midrule
 \textit{P-R}&\textbf{OBJ}&\textbf{OBJ}&N/A\\
 \textit{suffix=ment}&OBJ&OBJ&OBJ\\
 \textit{suffix=ance}&OBJ&NOBJ&NOBJ\\   
@@ -765,8 +762,8 @@ Table~\ref{tab:prediction:all} shows the direction of the prediction of the feat
 \textit{head\_in\_DC}&\textbf{OBJ}&\textbf{OBJ}&\textbf{OBJ}\\
 \textit{sum-adjectives}&NOBJ&OBJ&OBJ\\
 \textit{of\_outside\_DC}&\textbf{OBJ}&\textbf{OBJ}&\textbf{OBJ}\\
-\textit{by\_outside\_DC}&{NOBJ}&{NOBJ}&{NOBJ}\\
-\end{tabular}}
+\textit{by\_outside\_DC}&{NOBJ}&{NOBJ}&{NOBJ}\\\lspbottomrule
+\end{tabular}
 \end{table}
 
 
@@ -779,7 +776,7 @@ In the end we present the main comparison points with respect to previous NLP li
 
 \subsubsection{\textit{Process-vs-result} (\textit{P-R})}\label{sec:discussion-int-P-R}
 According to \tabref{tab:individual}, the best individual feature is the \textit{process vs.\ result} reading of the DC with 76.5\%~accuracy. 
-The accuracy resulting from the combined model with all features~(78.8\%) is not significantly higher (McNemar two-tailed p-value of~0.2482), showing that this single feature is indeed very strong, and stronger than any of the corpus-based features on their own or in combination  {(cf.~Table~\ref{tab:ablation:noP-R})}. This is not surprising, given that this feature encodes direct estimates for the ASN-hood of the head based on introspection.\footnote{It is interesting to see though that manual annotation was better at predicting ASN-hood than any of the corpus-based features, in spite of the huge corpus we used. This suggests that we need even larger corpora to make up for the performance of (expensive) manual annotation.} In the ablation experiment  in Table~\ref{tab:ablation:3As}, \textit{P-R} also proves to be very strong, since its removal yields a significantly lower result ( {72.0}\% vs.~78.8\%), the lowest  in this experiment. Still, the ablation study shows that removing \textit{of-outside} is as detrimental to the model as removing \textit{P-R}. This indicates that these two features capture characteristics that complement the rest of the corpus-based features to a similar extent.
+The accuracy resulting from the combined model with all features~(78.8\%) is not significantly higher (McNemar two-tailed p-value of~0.2482), showing that this single feature is indeed very strong, and stronger than any of the corpus-based features on their own or in combination  {(cf.~Table~\ref{tab:ablation:noP-R})}. This is not surprising, given that this feature encodes direct estimates for the ASN-hood of the head based on introspection.\footnote{It is interesting to see though that manual annotation was better at predicting ASN-hood than any of the corpus-based features, in spite of the huge corpus we used. This suggests that we need even larger corpora to make up for the performance of (expensive) manual annotation.} In the ablation experiment  in Table~\ref{tab:ablation:3As}, \textit{P-R} also proves to be very strong, since its removal yields a significantly lower result ({72.0}\% vs.~78.8\%), the lowest  in this experiment. Still, the ablation study shows that removing \textit{of-outside} is as detrimental to the model as removing \textit{P-R}. This indicates that these two features capture characteristics that complement the rest of the corpus-based features to a similar extent.
 
 Importantly, in line with our hypothesis, an increase in the \textit{P-R} value correlates with an OBJ interpretation of the compounds in both experiments (see  \tabref{tab:prediction:all}).  To be precise, the \textit{P-R} feature is so designed that a high value indicates that the DC is headed by an ASN, which parallels  the verbal construction in (\ref{tree}). Given that such a compositional structure requires the object to be realized first, the fact that a high \textit{P-R} value correlates with an OBJ reading of the DC in our models confirms our hypothesis that compositional DCs involve object non-heads.
 
@@ -787,46 +784,29 @@ The two columns in \tabref{tab:ex:p-r} illustrate pairs of DCs which, despite ha
 However, we also find examples with two  {considerably} different \textit{P-R} values under the same OBJ (or NOBJ) interpretation, which shows that there is no one-to-one correspondence between a (high) process reading and an OBJ interpretation of the DC.\footnote{ {NOBJ-DCs with a high \textit{P-R} value are usually headed by simple event nominals like the nouns in (\ref{ex:aspect}c, d).}} 
 
 \begin{table}
-\caption{\label{tab:ex:p-r} DC pairs with contrasting \textit{P-R} values }
-{\footnotesize
-\begin{tabular}{|p{2.9cm}R{0.9cm}p{1.0cm}|p{2.9cm}R{0.9cm}p{1.0cm}|}
-\hline
-\multicolumn{3}{|c|}{\textbf{High \textit{P-R} > 60\%}} & \multicolumn{3}{c|}{\textbf{Low \textit{P-R} < 60\%}}\\
-\hline
-DC & P-R & Reading& DC & P-R & Reading\\
-\hline
-home building&100\%&OBJ & police building &20.0\%& NOBJ\\ 
-\hline
-book reading&100\%& OBJ & temperature reading &40.0\%&OBJ\\
-\hline
-ship breaking&93.3\%& OBJ & record breaking &40.0\%& OBJ\\
-\hline
-science teaching&93.3\%&OBJ & church teaching &46.7\%& NOBJ\\
-%\hline
-%novel writing &93.3\%&OBJ & food writing &46.7\%& NOBJ\\
-\hline
-career counseling&93.3\%& NOBJ& telephone counseling &53.3\%& NOBJ\\
-%\hline
-%troop deployment&86.7\%& OBJ & ground deployment &46.7\%& NOBJ\\
-\hline
-slum clearance&80.0\%& OBJ & safety clearance &20.0\%& NOBJ\\
-\hline
-body movement&80.0\%& OBJ& student movement &33.3\%& NOBJ\\
-\hline
-nicotine withdrawal&80.0\%& NOBJ & summer withdrawal &33.3\%& NOBJ\\
-%\hline
-%village demolition &80\%& OBJ & weekend demolition &46.7\%& NOBJ\\
-\hline
-refuse disposal&80.0\%& OBJ & garbage disposal &46.7\%& OBJ\\
-%\hline
-%campaign funding &80\%& OBJ & government funding &53.3\%& NOBJ\\
-\hline
-temperature tolerance&73.3\%& OBJ & alcohol tolerance &20.0\%& OBJ\\
-%\hline
-%downtown renewal &73.3\%& OBJ & permit renewal &40.0\%& OBJ \\
-\hline
-cancer treatment&73.3\%& OBJ & spa treatment &46.7\%& NOBJ\\
-\hline
+\caption{\label{tab:ex:p-r}DC pairs with contrasting \textit{P-R} values}
+\resizebox{\textwidth}{!}{\begin{tabular}{*{2}{lS[table-format=2.1]r}}
+\lsptoprule
+\multicolumn{3}{c}{High \textit{P-R} > 60\%} & \multicolumn{3}{c}{Low \textit{P-R} < 60\%}\\\cmidrule(lr){1-3}\cmidrule(lr){4-6}
+DC & {P-R (\%)} & Reading& DC & {P-R (\%)} & Reading\\
+\midrule
+home building&100&OBJ & police building &20& NOBJ\\ 
+book reading&100& OBJ & temperature reading &40&OBJ\\
+ship breaking&93.3& OBJ & record breaking &40& OBJ\\
+science teaching&93.3&OBJ & church teaching &46.7& NOBJ\\
+%%novel writing &93.3&OBJ & food writing &46.7& NOBJ\\
+career counseling&93.3& NOBJ& telephone counseling &53.3& NOBJ\\
+%%troop deployment&86.7& OBJ & ground deployment &46.7& NOBJ\\
+slum clearance&80& OBJ & safety clearance &20& NOBJ\\
+body movement&80& OBJ& student movement &33.3& NOBJ\\
+nicotine withdrawal&80& NOBJ & summer withdrawal &33.3& NOBJ\\
+%%village demolition &80& OBJ & weekend demolition &46.7& NOBJ\\
+refuse disposal&80& OBJ & garbage disposal &46.7& OBJ\\
+%%campaign funding &80& OBJ & government funding &53.3& NOBJ\\
+temperature tolerance&73.3& OBJ & alcohol tolerance &20& OBJ\\
+%%downtown renewal &73.3& OBJ & permit renewal &40& OBJ \\
+cancer treatment&73.3& OBJ & spa treatment &46.7& NOBJ\\
+\lspbottomrule
 \end{tabular}}
 \end{table}
 
@@ -865,20 +845,21 @@ The question is why the \textit{of\_outside\_DC} feature  does not score better 
 
   
 \begin{table}
-\caption{\label{tab:ex:of:phrases} Head nouns with (in)frequent \textit{of}-phrases. Outliers in bold}
-{\small \begin{tabular}{|l|r|r|}
-\hline
-\textbf{Head noun}&\textbf{\textit{Of\_outside\_DC}}&\textbf{OBJ-reading}\\
-\hline
-creation&80.5\%&72.7\%\\ \hline
-avoidance&70.4\%&100\%\\\hline
-obstruction&65.3\%&90.5\%\\   \hline
-assassination&52.3\%&\textbf{11.8}\%\\ \hline
-preservation&52.1\%&100\%\\  \hline \hline
-proposal&1.0\%&\textbf{76.2\%}\\ \hline
-counseling&0.5\%&10.0\%\\\hline
-mongering&0.0\%&\textbf{100}\%\\\hline
-\end{tabular}}
+\caption{\label{tab:ex:of:phrases}Head nouns with (in)frequent \textit{of}-phrases. Outliers in bold}
+\begin{tabular}{lSS}
+\lsptoprule
+{Head noun}& {\textit{Of\_outside\_DC} (\%)}& {OBJ-reading (\%)}\\
+\midrule
+creation&80.5&72.7\\ 
+avoidance&70.4&100\\
+obstruction&65.3&90.5\\   
+assassination&52.3&\bfseries 11.8\\ 
+preservation&52.1&100\\   
+proposal&1&\bfseries 76.2\\ 
+counseling&0.5&10\\
+mongering&0& \bfseries 100\\
+\lspbottomrule
+\end{tabular}
 \end{table}
 
 The samples  in \tabref{tab:ex:of:phrases} show various mismatches between the realization of \textit{of}-phrases and the formation of OBJ-DCs. For instance, \textit{avoidance} and \textit{preservation}, which build only OBJ-DCs in our database, have fewer occurrences with an \textit{of}-phrase than \textit{creation}, which forms only~72.7\% OBJ-DCs. Moreover, \textit{proposal}, which forms a high proportion of OBJ-DCs, realizes \textit{of}-phrases  in~only~1.0\% of its occurrences. In spite of the many OBJ-DCs like  \textit{book/contract/marriage}/\textit{investment proposal}, the verbal relation is lost in this noun. It mostly functions as an RN, i.e., it refers to the proposal made, and not to the process/event of proposing. In confirmation of this, these DCs received a \textit{P-R} rating as low as~20\% to~26.7\%.
@@ -888,7 +869,7 @@ The confusion matrix for the feature \textit{of\_outside\_DC} in Table~\ref{tab:
 
 
 \begin{table}
-\caption{\label{tab:conf:of-outside} Confusion matrix for \textit{of\_outside\_DC}}
+\caption{\label{tab:conf:of-outside}Confusion matrix for \textit{of\_outside\_DC}}
 {\footnotesize
 \begin{tabular}{|l|l|l|l|l|}
 \hline
@@ -925,17 +906,19 @@ The frequency of the noun head in a singular form whether outside or inside a DC
 
 \subsubsection{\textit{Head\_in\_DC} (Compoundhood)} 
 As an individual feature, the accuracy of \textit{head\_in\_DC} is just above average among the other features in the present study (see \tabref{tab:individual}). Its removal in our ablation experiments  yields  slight and non-significant drops in accuracy. In \sectref{sec:theory:features}, we conjectured that an OBJ reading of DCs whose head nouns present high compoundhood would show us that a compositional construction with an object non-head is very likely to form DCs. The  direction of prediction in \tabref{tab:prediction:all} indicates that high values of this feature consistently correlate with OBJ-DCs, supporting this assumption. However, why does this feature not perform better? Our full database shows that its values are not informative enough: there are a few head nouns which display high compoundhood and frequently form OBJ-DCs, but the majority of DCs  have very low such values. Only~5.1\% of our DCs have a \textit{head\_in\_DC} value above~50\% and as many as~70.3\% of them have one under~20\%. 
+
 \begin{table}
-\caption{\label{tab:compoundhood:ex} Head nouns with high compoundhood}
-\begin{tabular}{|l|r|r|}
-\hline
-\textbf{Head noun}&\textbf{\textit{Head\_in\_DC}}&\textbf{OBJ-reading}\\
-\hline
-laundering&94.8\%&95.5\%\\ \hline
-mongering&91.8\%&100\%\\\hline
-growing&68.7\% &95.2\%\\\hline
-trafficking&62.0\%&100\%\\   \hline
-enforcement&53.7\%&66.6\%\\ \hline
+\caption{\label{tab:compoundhood:ex}Head nouns with high compoundhood}
+\begin{tabular}{lSS}
+\lsptoprule
+Head noun& {\textit{Head\_in\_DC} (\%)}& {OBJ-reading (\%)}\\
+\midrule
+laundering&94.8&95.5\\
+mongering&91.8&100\\
+growing&68.7 &95.2\\
+trafficking&62&100\\
+enforcement&53.7&66.6\\
+\lspbottomrule
 \end{tabular}
 \end{table}
 
@@ -995,17 +978,28 @@ In addition, some tests which are popular in the theoretical literature (e.g., \
 
 By comparison to the previous NLP work on  {the transparency of (root)} compounds, we did not consider both constituents to evaluate the  mapping with the compound; we focused on the head noun, which  has a crucial influence on the relationship that it establishes with the non-head in DCs. In future work, we will consider including some predictive features of the non-head. We expect that the encyclopedic features exploited in the NLP literature such as in \cite{NicholsonBaldwin:06}, \cite{lapata:02}, and \cite{grover:lapata:lascarides:05} will benefit the disambiguation of RNs and the DCs headed by these. 
 
-
 \section*{Abbreviations}
-ASN -- Argument Structure Nominal; CL -- Computational Linguistics; DC -- Deverbal Compound; DS -- Distributional Semantics; IAA -- inter-annotator agreement; NLP -- Natural Language Processing; \textit{P-R} -- \textit{process-vs-result} feature; PoC -- Principle of Compositionality; POS -- Part of Speech; RC -- Root Compound; RN -- Result Nominal; TL -- Theoretical Linguistics.
+\begin{multicols}{2}
+ \begin{tabbing}
+ ASN\hspace{1em} \= Principle of Compositionality\kill
+ ASN \> Argument Structure Nominal\\
+ CL \> Computational Linguistics\\
+ DC \> Deverbal Compound\\
+ DS \> Distributional Semantics\\
+ IAA \> inter-annotator agreement\\
+ NLP \> Natural Language Processing\\
+ \textit{P-R} \> \textit{process-vs-result} feature\\
+ PoC \> Principle of Compositionality\\
+ POS \> Part of Speech\\
+ RC \> Root Compound\\
+ RN \> Result Nominal\\
+ TL \> Theoretical Linguistics
+ \end{tabbing}
+\end{multicols}
 
 \section*{Acknowledgements}
 We are grateful to Katherine Fraser, Bethany Lochbihler and Whitney Frazier Peterson for annotating our database, to Kerstin Eckart and the INF project in the SFB 732 for important technical support, and to Alla Abrosimova for help with further technical details. This research has been funded by the German Research Foundation (DFG) via a grant offered to the Projects B1 \textit{The Form and Interpretation of Derived Nominals} and D11 \textit{A Crosslingual Approach to the Analysis of Compound Nouns}, as part of the SFB 732 \textit{Incremental Specification in Context} at the University of Stuttgart.
 
-
 % Bibliography:
-
 {\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
-
-
 \end{document}

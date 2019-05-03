@@ -13,7 +13,7 @@ Following \cite{baronipredict}, who demonstrated that DSMs generated using feedf
 
 \subsection{Materials}
 
-We experimented with a sample of the MorBoComp database including 163 English compounds. MorboComp is a large, multilingual database of compounds that has been developed to study compounding from a typological perspective.\footnote{For further details, see: \texttt{http://morbocomp.sslmit.unibo.it/index.php?section=home}} Each compound in the database is richly annotated (i.e., it is provided with information about headedness, compound and constituents' grammatical category, compound structure, etc.) and, crucially for our purposes, it is classified as Subordinate (hence, SUB), Attributive (hence, ATT) or Coordinate (hence, CRD) on the basis of the classification and terminology proposed by \cite{SB2005}. To illustrate, \emph{schoolteacher} is tagged as SUB, \emph{keyword} as ATT, and \emph{king-emperor} as CRD.
+We experimented with a sample of the MorBoComp database including 163 English compounds. MorboComp is a large, multilingual database of compounds that has been developed to study compounding from a typological perspective.\footnote{For further details, see: \url{http://morbocomp.sslmit.unibo.it/index.php?section=home}} Each compound in the database is richly annotated (i.e., it is provided with information about headedness, compound and constituents' grammatical category, compound structure, etc.) and, crucially for our purposes, it is classified as Subordinate (hence, SUB), Attributive (hence, ATT) or Coordinate (hence, CRD) on the basis of the classification and terminology proposed by \cite{SB2005}. To illustrate, \emph{schoolteacher} is tagged as SUB, \emph{keyword} as ATT, and \emph{king-emperor} as CRD.
 
 Consistently with the criteria outlined in \cite{SB2005}, the 163-item sample contained cases of both `phrasal' compounds (\emph{do-it-yourself illustration}, \emph{around-the-world flight}) and `neoclassical' formations (\emph{bibliography}, \emph{theology}). In addition, a handful of items labeled with OTH (i.e., Other) were found. Since this label was used by the annotators for either unresolved or idiosyncratic cases, however, we decided not to consider them in our investigation. Similarly, we removed neoclassical formations since their constituents can be affixes and suffixes rather than free-standing, independent words (e.g. \emph{biblio-}). As a consequence, in our distributional semantics approach we could not have a vector representation for these items. Finally, additional 9 compounds were discarded since one of their constituents turned out not to be included in the 300K-vector semantic space. Specifically, 8 out of 9 of the missing items were first constituents of phrasal compounds, e.g. \emph{all-goes-well} (\emph{in all-goes-well atmosphere}) or \emph{floor-of-a-birdcage} (\emph{in floor-of-a-birdcage taste}), whereas in one case (\emph{well-deserver}) the missing items was the second constituent (\emph{deserver}). After this filtering process, our resulting dataset included 132 compounds (67 SUB, 49 ATT, 16 CRD), that we used for our experiment.
 
@@ -60,12 +60,11 @@ In addition, we computed (9) Pointwise Mutual Information (PMI) between the cons
 
 Finally, we included (10) compound length measured as the number of characters making up the string (e.g., \emph{blackboard} has length 10). When present, hyphens were not counted. Descriptive statistics including mean values and standard deviations for all the predictors used in the present experiment are reported in Table~\ref{tab:descriptives}.
 
-\begin{table}[t!]
-
-\begin{tabular}{|l|ll|ll|ll|ll|}
-\hline
-Predictor          & \multicolumn{2}{c|}{SUB} & \multicolumn{2}{c|}{ATT} & \multicolumn{2}{c|}{CRD} & \multicolumn{2}{c|}{Total}  \\ \hline
-                   & \textit{mean}   & \textit{sd}   & \textit{mean}    & \textit{sd}   & \textit{mean}   & \textit{sd}   & \textit{mean} & \textit{sd} \\ \hline
+\begin{table}[t]
+\begin{tabular}{l *{8}{S[table-format=2.2]}}
+\lsptoprule
+Predictor          & \multicolumn{2}{c}{SUB} & \multicolumn{2}{c}{ATT} & \multicolumn{2}{c}{CRD} & \multicolumn{2}{c}{Total}  \\ \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+                   & \textit{mean}   & \textit{sd}   & \textit{mean}    & \textit{sd}   & \textit{mean}   & \textit{sd}   & \textit{mean} & \textit{sd} \\ \midrule
 MCsim              & 0.21            & 0.10           & 0.18             & 0.09          & 0.24            & 0.13          & 0.20           & 0.10         \\
 HCsim              & 0.25            & 0.11          & 0.21             & 0.10           & 0.24            & 0.10           & 0.23          & 0.11        \\
 MHsim              & 0.13            & 0.10           & 0.14             & 0.09          & 0.34            & 0.15          & 0.16          & 0.12        \\
@@ -75,10 +74,10 @@ Comp length        & 10.40            & 2.54          & 10.90             & 3.37
 Comp freq          & 1.87            & 1.17          & 2.25             & 1.38          & 2.31            & 0.72          & 2.06          & 1.22        \\
 Mod freq           & 5.26            & 0.86          & 5.31             & 1.38          & 5.32            & 0.48          & 5.29          & 1.05        \\
 Head freq          & 4.97            & 0.85          & 4.92             & 0.89          & 5.12            & 0.65          & 4.97          & 0.84        \\
-PMI                & 3.53            & 4.00             & 4.83             & 4.80           & 4.34            & 3.47          & 4.11          & 4.27        \\ \hline
-\textit{Num items} & \multicolumn{2}{c|}{67}          & \multicolumn{2}{c|}{49}          & \multicolumn{2}{c|}{16}         & \multicolumn{2}{c|}{132}    \\ \hline
+PMI                & 3.53            & 4.00             & 4.83             & 4.80           & 4.34            & 3.47          & 4.11          & 4.27        \\ \midrule
+\textit{Num items} & \multicolumn{2}{c}{67}          & \multicolumn{2}{c}{49}          & \multicolumn{2}{c}{16}         & \multicolumn{2}{c}{132}    \\ \lspbottomrule
 \end{tabular}
-\caption{Mean and standard deviation of all the predictors included in the experiment. MCsim = modifier-compound similarity. HCsim = head-compound similarity. MHsim = modifier-head similarity. Comp length = compound length. Comp freq = compound frequency. Mod freq = modifier frequency. Head freq = head frequency.}\label{tab:descriptives}
+\caption{Mean and standard deviation of all the predictors included in the experiment. MCsim: modifier-compound similarity. HCsim: head-compound similarity. MHsim: modifier-head similarity. Comp length: compound length. Comp freq: compound frequency. Mod freq: modifier frequency. Head freq: head frequency.}\label{tab:descriptives}
 \end{table}
 
 \subsection{Data analysis}

@@ -11,11 +11,11 @@
 \documentclass[output=book
 		,modfonts
 		,nonflat
-	        ,collection
-	        ,collectionchapter
-	        ,collectiontoclongg
- 	        ,biblatex  
-% 	        ,coverus
+	    ,collection
+	    ,collectionchapter
+	    ,collectiontoclongg
+ 	    ,biblatex  
+ 	    ,arseneau
 		  ]{langsci/langscibook}                              
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -28,17 +28,13 @@
 \input{localhyphenation.tex}
 \input{localcommands.tex} 
 
-% bibliographies in individual chapters:
-
-%\bibliography{localbibliography}
-
-%\addbibresource{chapters/prefaceEd.bib}
+\addbibresource{chapters/prefaceEd.bib}
 %%% not needed, is part of prefaceEd.bib: \addbibresource{chapters/springorum.bib}
-%\addbibresource{chapters/libben.bib}
-%\addbibresource{chapters/pezzele.bib}
-%\addbibresource{chapters/gianina.bib}
-%\addbibresource{chapters/henneke.bib}
-%\addbibresource{chapters/gagne.bib} 
+% \addbibresource{chapters/libben.bib}
+\addbibresource{chapters/pezzele.bib}
+\addbibresource{chapters/gianina.bib}
+\addbibresource{chapters/henneke.bib}
+\addbibresource{chapters/gagne.bib} 
 \addbibresource{chapters/smolka.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,7 +52,7 @@
 
 %% Additional prefaces and/or introductions that also have authors
 \lsCollectionPaperFrontmatterMode % Enter the Frontmatter Mode. 
-%\includepaper{chapters/prefaceEd}
+\includepaper{chapters/prefaceEd}
 \lsCollectionPaperMainmatterMode % Leave the Frontmatter Mode 
 \setcounter{chapter}{0} % Reset the chapter counter so that preceeding prefaces are not counted
 %%
@@ -68,7 +64,7 @@
 %%%                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includepaper{chapters/libben}
+% \includepaper{chapters/libben}
 \includepaper{chapters/springorum}
 \includepaper{chapters/pezzele}
 \includepaper{chapters/gianina}
