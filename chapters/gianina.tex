@@ -213,7 +213,7 @@ First of all, our results indicate that all the ASN-hood features have predictiv
  Our study investigates transparency strictly from the perspective of the compositional structure in  (\ref{tree}). The degree of (lexico-semantic) transparency of DCs that do not receive such a verb-related compositional interpretation (i.e., those headed by RNs) goes beyond the scope of our present study and must be left for a future endeavor. As mentioned above, the role of world knowledge and context is essential for such DCs. Therefore, such an investigation would need to employ a different methodology, more similar to that pursued in several computational studies as presented in  ~\sectref{sec:NLP:lit:compositional}. We also do not aim to measure speaker intuitions about the transparency degrees of DCs (as done in some of these computational approaches), although it would be interesting to compare such ratings with our relation-based annotations  in the future. Our present study conceptually differs from these computational approaches, as it addresses the transparency of DCs from a structural perspective. We use insights from theoretical linguistics on the morphosyntactic properties of the deverbal noun heads of DCs and general principles of syntax-semantics mapping, and test these theoretical hypotheses  with corpus-based and computational methods.
 
 We start with an overview of relevant  {previous studies from Theoretical Linguistics (TL)} and  {Natural Language Processing~(NLP)} in \sectref{sec:previous:lit}.
-Sections \sectref{sec:methodology} and \sectref{sec:features} describe our data collection and methodology; \sectref{sec:ML} presents our experiments, followed by a discussion in \sectref{sec:discussion}. We draw our conclusions in \sectref{sec:conclusions}.
+Sections \sectref{sec:methodology} and \sectref{sec:features} describe our data collection and methodology; \sectref{sec:ML} presents our experiments, followed by a discussion in \sectref{sec:gia:discussion}. We draw our conclusions in \sectref{sec:conclusions}.
 
 
 
@@ -767,14 +767,14 @@ Table~\ref{tab:prediction:all} shows the direction of the prediction of the feat
 \end{table}
 
 
-\section{Discussion}\label{sec:discussion}
-In what follows we offer a detailed discussion of our results and interpret them in view of our initial hypothesis (\sectref{sec:discussion-int}). We then show their implications for compositionality and for our starting hypothesis (\sectref{sec:discussion-hypothesis}).
-In the end we present the main comparison points with respect to previous NLP literature (\sectref{sec:discussion-comparison}).
+\section{Discussion}\label{sec:gia:discussion}
+In what follows we offer a detailed discussion of our results and interpret them in view of our initial hypothesis (\sectref{sec:gia:discussion-int}). We then show their implications for compositionality and for our starting hypothesis (\sectref{sec:gia:discussion-hypothesis}).
+In the end we present the main comparison points with respect to previous NLP literature (\sectref{sec:gia:discussion-comparison}).
 
-\subsection{Interpretation of results}\label{sec:discussion-int}
+\subsection{Interpretation of results}\label{sec:gia:discussion-int}
 
 
-\subsubsection{\textit{Process-vs-result} (\textit{P-R})}\label{sec:discussion-int-P-R}
+\subsubsection{\textit{Process-vs-result} (\textit{P-R})}\label{sec:gia:discussion-int-P-R}
 According to \tabref{tab:individual}, the best individual feature is the \textit{process vs.\ result} reading of the DC with 76.5\%~accuracy. 
 The accuracy resulting from the combined model with all features~(78.8\%) is not significantly higher (McNemar two-tailed p-value of~0.2482), showing that this single feature is indeed very strong, and stronger than any of the corpus-based features on their own or in combination  {(cf.~Table~\ref{tab:ablation:noP-R})}. This is not surprising, given that this feature encodes direct estimates for the ASN-hood of the head based on introspection.\footnote{It is interesting to see though that manual annotation was better at predicting ASN-hood than any of the corpus-based features, in spite of the huge corpus we used. This suggests that we need even larger corpora to make up for the performance of (expensive) manual annotation.} In the ablation experiment  in Table~\ref{tab:ablation:3As}, \textit{P-R} also proves to be very strong, since its removal yields a significantly lower result ({72.0}\% vs.~78.8\%), the lowest  in this experiment. Still, the ablation study shows that removing \textit{of-outside} is as detrimental to the model as removing \textit{P-R}. This indicates that these two features capture characteristics that complement the rest of the corpus-based features to a similar extent.
 
@@ -834,7 +834,7 @@ The confusion matrix for the feature \textit{P-R} in Table~\ref{tab:conf:p-r} co
 In our study, the \textit{P-R} annotation feature comes closest to the  {transparency} rating of compounds carried out in some NLP studies (cf.~\sectref{sec:NLP:lit}). The difference is that we correlated the rating with the semantics of the base verb in combination with its argument or adjunct, following \citeauthor{grimshaw:90}'s~(\citeyear{grimshaw:90}) insight.  {At the same time, our design primarily targeted compositionality.} 
 
 
-\subsubsection{\textit{Of\_outside\_DC}}\label{sec:discussion-int-of}
+\subsubsection{\textit{Of\_outside\_DC}}\label{sec:gia:discussion-int-of}
 
 The next most important feature in our endeavor to capture compositionality in DCs is the realization of an \textit{of}-phrase by the deverbal noun. This feature is intended to measure how often the deverbal noun realizes an \textit{of}-phrase introducing the object argument, when appearing outside DCs. As explained in \sectref{sec:properties:ASN}, this is the necessary and sufficient condition to diagnose an ASN in Grimshaw's theory. If the head noun of a DC shows a high tendency to realize \textit{of}-phrases introducing objects, we expect it to also require object non-heads in DCs.
 
@@ -892,7 +892,7 @@ All in all, when comparing \textit{of\_outside\_DC} with \textit{P-R} in the abl
 
 
 
-\subsubsection{\textit{Suffix}}\label{sec:discussion-int-suffix}
+\subsubsection{\textit{Suffix}}\label{sec:gia:discussion-int-suffix}
 \textit{Suffix} is an important feature in all our models (see Tables \ref{tab:individual}, \ref{tab:ablation:3As}, and \ref{tab:ablation:noP-R}).  {It is the strongest corpus-based feature, as we can see from the performance of the individual features in Table~\ref{tab:individual}, and has additional predictive power compared to the combination of all features}  {(see Tables~\ref{tab:ablation:3As} and \ref{tab:ablation:noP-R}).} However, \tabref{tab:prediction:all} demonstrates a high variance in the direction of prediction of each suffix.  {Except for \textit{-ment}, which correlates with OBJ readings,} none of them is constant across models. 
 
  {As noted in \sectref{sec:theory:features}, the theoretical literature does not offer much on the role of suffixes in the ASN vs.\ RN disambiguation of deverbal nouns. \cite{grimshaw:90} and \cite{borer:13} suggest that \textit{-ing} should form ASNs, which is disconfirmed by some data and by our models, where \textit{-ing} oscillates between OBJ- and NOBJ-DCs. It is difficult to draw any conclusions on the role of the \textit{suffix} feature for our compositionality hypothesis for two reasons. First, more theoretical research must be pursued to draw some definite conclusions on possible correlations between suffixes and ASN-hood, since the one suffix that was expected to show a preference did not. Second, we must also consider that the dataset of DCs for each suffix was five times smaller than for the other features in our study: i.e., the feature \textit{suffix} subsumes five different suffix features. The small dataset may also be a reason for the inconclusiveness of the results in \tabref{tab:prediction:all}.}\footnote{ {To check correlations between individual suffixes and ASN-hood, one could measure how the \textit{suffix} feature fares with respect to the \textit{P-R} value and not the OBJ-NOBJ readings of DCs. This, however, would digress from the focus of this paper and we leave it for future research.}}
@@ -924,7 +924,7 @@ enforcement&53.7&66.6\\
 
 \tabref{tab:compoundhood:ex} illustrates the few head nouns that most often appear in DCs and the frequency of an OBJ reading among the DCs they appear as heads of. As visible there, a high frequency of a deverbal noun in DCs correlates with a high value for an OBJ reading of the compound's non-head, as predicted (cf.~\sectref{sec:theory:features}). 
 
-\subsubsection{\textit{Sum-adjectives} and \textit{by}-phrases}\label{sec:discussion-int-by}
+\subsubsection{\textit{Sum-adjectives} and \textit{by}-phrases}\label{sec:gia:discussion-int-by}
 The last three features we employed in our study are \textit{sum-adjectives},  \textit{by\_outside\_DC} and  \textit{by\_inside\_DC}. On their own, they have some predictive power (\tabref{tab:individual}),  {but their removal in \tabref{tab:ablation:3As} has no significant impact on the results, showing that \textit{P-R} compensates for their absence. Interestingly, in the corpus-based model in  \tabref{tab:ablation:noP-R}, the removal of \textit{by\_outside\_DC} triggers a significant drop, indicating that in the absence of \textit{P-R}, this feature becomes important. Yet, in spite of Grimshaw's expectation for this feature to identify OBJ-DCs, its direction of prediction is NOBJ in all models (see \tabref{tab:prediction:all}). As we saw in Section~\ref{sec:properties:ASN}, \textit{by}-phrases are ambiguous and their presence indicates ASN-hood only when the object argument is also realized (see (\ref{ex:by})). We considered using the frequency of  \textit{by}-phrases co-occurring with \textit{of}-phrases, but the numbers were extremely low. Thus, the unexpected direction of prediction of \textit{by}-phrases might be due to their ambiguity. The other two features do not preserve the direction of prediction (\tabref{tab:prediction:all}).}
 
 
@@ -936,12 +936,12 @@ In summary, \textit{P-R}, the feature based on introspection, is the strongest. 
 
 The latent variable that we are trying to capture with the features presented in this study, the ASN-hood of the head, is best represented by the introspection-based feature \textit{P-R}. The corpus-based features \textit{suffix} and \textit{of-outside} have additional value in the combined model, that includes P-R, as the ablation studies show. They seem to help the strong feature P-R to move the model in the right direction. However, although the combination of P-R and the best corpus-based features leads to an improvement (80.3\% vs 78.8\%), we could not prove that their addition to \textit{P-R} as a single feature model improves the results significantly.
 
-\subsection{Implications for our hypothesis}\label{sec:discussion-hypothesis}
+\subsection{Implications for our hypothesis}\label{sec:gia:discussion-hypothesis}
 
 
-We have identified four features which are important for the interpretation of DCs: \textit{P-R}, \textit{of\_outside\_DCs}, \textit{by\_outside\_DC}, and \textit{suffix}. The first three were inspired by \cite{grimshaw:90}, the fourth was introduced by us. As mentioned in \sectref{sec:discussion-int-suffix}, the suffix does not tell us anything about ASN-hood or the compositionality of the DC. It is a corpus-based feature, which scores well on its own and better than most ASN-features from \cite{grimshaw:90}; yet, in ablation studies, it is weaker than \textit{of\_outside\_DCs}, which is Grimshaw's most important ASN-feature.
+We have identified four features which are important for the interpretation of DCs: \textit{P-R}, \textit{of\_outside\_DCs}, \textit{by\_outside\_DC}, and \textit{suffix}. The first three were inspired by \cite{grimshaw:90}, the fourth was introduced by us. As mentioned in \sectref{sec:gia:discussion-int-suffix}, the suffix does not tell us anything about ASN-hood or the compositionality of the DC. It is a corpus-based feature, which scores well on its own and better than most ASN-features from \cite{grimshaw:90}; yet, in ablation studies, it is weaker than \textit{of\_outside\_DCs}, which is Grimshaw's most important ASN-feature.
 
-The other three features all give us input on ASN-hood, but in different ways. An unexpected result comes from \textit{by\_outside\_DC}, whose direction of prediction is for NOBJ-DCs, instead of OBJ-DCs. In \sectref{sec:discussion-int-by}, we reasoned that this is due to the ambiguity of \textit{by}-phrases, which we could not eliminate by measuring their co-occurrence with \textit{of}-phrases, given data sparsity. The only way we can interpret this result is that, in combination with other ASN-features which usually point to OBJ-DCs, the input from the ambiguous \textit{by}-phrases was used by the model for the other direction, of NOBJ-DCs.
+The other three features all give us input on ASN-hood, but in different ways. An unexpected result comes from \textit{by\_outside\_DC}, whose direction of prediction is for NOBJ-DCs, instead of OBJ-DCs. In \sectref{sec:gia:discussion-int-by}, we reasoned that this is due to the ambiguity of \textit{by}-phrases, which we could not eliminate by measuring their co-occurrence with \textit{of}-phrases, given data sparsity. The only way we can interpret this result is that, in combination with other ASN-features which usually point to OBJ-DCs, the input from the ambiguous \textit{by}-phrases was used by the model for the other direction, of NOBJ-DCs.
 
 The features \textit{P-R} and \textit{of\_outside\_DCs} are the most important for the ASN-hood of head nouns and the implicit compositional interpretation of DCs. They both behave as predicted by our hypothesis. \textit{P-R} represents human intuitions with respect to the ASN-hood of the head noun and scores best in our models. In addition, in line with Grimshaw's claims and our hypothesis, its direction of prediction consistently points to OBJ-DCs. \textit{Of\_outside\_DCs} is not very strong on its own, but extremely important in combination with the other ASN-features. This is in fact what Grimshaw's combined use of two or three of these morphosyntactic tests (in order to circumvent ambiguity) leads us to expect (see \sectref{sec:properties:ASN}).
 
@@ -951,7 +951,7 @@ For the DCs whose heads fail to exhibit ASN-properties and behave like RNs, our 
  {We leave such a study for future research, since it departs from our focus here.}
 
 
-\subsection{Comparison to other NLP approaches}\label{sec:discussion-comparison}
+\subsection{Comparison to other NLP approaches}\label{sec:gia:discussion-comparison}
 
 We mentioned in \sectref{sec:NLP:lit:predictions} that the aims of previous work on predicting the relation between heads and non-heads in DCs are  different from ours. Whereas this work focuses on building classifiers that reach state-of-the-art performance on the task of predicting the relation between the head and the non-head of deverbal compounds, our interest lies in uncovering in how far the behavior of the derived nominals (as ASNs or RNs) can help in predicting the (compositional) relation between head and non-head. As a result, the datasets are very different. 
 
