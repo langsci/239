@@ -36,11 +36,11 @@ only a remote resemblance to the meaning of \textit{stehen}
 (`stand'). Similarly, the constituents of noun compounds do not
 necessarily contribute to their whole-word meanings in a
 straightforward way. The meaning contribution may range from
-relatively semantically transparent as in \textit{Familienname}
-(`family name') to semantically opaque, as in \textit{Spitzname}
-(`nickname', lit. `pointy name') or \textit{Zwickmühle} (`dilemma',
+relatively semantically transparent as in \textit{Nudelsuppe}
+(`noodle soup') to semantically opaque, as in \textit{Spitzname}
+(`nickname', lit. `pointy name'), \textit{Geduldsfaden} (`patience', lit. `patience thread'), or  \textit{Zwickmühle} (`dilemma',
 lit. `pinch mill'), which contain a modifier (i.e. the left
-constituent) or a head (i.e. the right constituent) that renders the
+constituent) and/or a head (i.e. the right constituent) that render the
 compound semantically more opaque.  The most extreme meaning shifts
 across types of MWEs occur in idiomatic constructions, such as
 \textit{kick the bucket} and \textit{reach for the stars}, where the
@@ -61,12 +61,10 @@ corpus-based and computational studies.
 
 \section{Contributions}
 
-In the following, the six contributions in this volume discuss MWEs
+In the following, the seven contributions in this volume discuss MWEs
 that are composed of different types of constituents, including the
 combination of particle+stem in complex verbs (e.g.,
-\textit{aufstehen}, `stand up’), the combination of stem+ stem and
-stem+preposition+stem in noun compounds (e.g., \textit{nickname,
-  government assessment, juego de niños}), the combination of
+\textit{aufstehen}, `stand up’), the combination of stem+stem in existing and novel compounds (e.g., \textit{nickname}, and \textit{campeel}, respectively), the combination of stem+preposition+stem in noun compounds (e.g., \textit{government assessment, juego de niños}), the combination of
 modifier+stem in modifier-noun phrases (e.g., \textit{the brown dog})
 and idiomatic combinations of words (e.g., \textit{reach for the
   stars}).
@@ -80,7 +78,7 @@ categories of MWEs we summarise the contributions to this collection.
 \subsection{Complex verbs}
 \label{sec:verbs}
 
-Seminal psycholinguistic studies have applied the manipulation of
+Seminal psycholinguistic studies have applied manipulations of
 semantic transparency to study whether verbal MWEs of the type
 prefix+stem, particle+stem and stem+suffix are lexically represented
 and processed via the constituents or as a whole-word unit (e.g.,
@@ -111,10 +109,9 @@ approaches, such as the convergence-of-codes account, form and meaning
 relatedness between word pairs determines lexical processing
 \citep{Plaut/Gonnerman:00, GonnermanEtAl:07}.
 
-Findings in German, however, indicate that lexical processing in
-German occurs via the stem and irrespective of semantic transparency
+Findings in German, however, indicate that lexical processing occurs via the stem and irrespective of semantic transparency
 (i.e., meaning composition of the complex verb). Low semantically
-related word pairs (\textit{entwerfen--werfen}, `design--throw')
+related word pairs (\textit{entwerfen--werfen}, `design'--`throw')
 induced facilitation of the stem to the same extent as semantically
 related word pairs did: \textit{bewerfen--werfen}, `throw at'--`throw'
 (e.g., \citealt{SmolkaEtAl:09, SmolkaEtAl:14, SmolkaEtAl:15,
@@ -142,26 +139,26 @@ syntax-semantics interface. \cite{SchulteImWalde:06c} and
 \cite{Bott/SchulteImWalde:18} integrated the subcategorisation
 transfer of German particle verbs with respect to their base verbs
 into models of
-compositionality. \cite{Kuehner/SchulteImWalde:10,Bott/SchulteImWalde:17,Koeper/SchulteImWalde:17a}
+compositionality. \cite{Kuehner/SchulteImWalde:10}, \cite{Bott/SchulteImWalde:17},  and \cite{Koeper/SchulteImWalde:17a}
 used clustering to distinguish between multiple senses, and common
 cluster membership to determine
 compositionality. \cite{Koeper/SchulteImWalde:16b} and
-\cite{AedmaaEtAl:18} applied classifiers to identify non-literal
+\cite{AedmaaEtAl:18} applied classifiers to identify figurative
 language usage of German and Estonian particle verbs in context.
 
-So far, most approaches that have dealt with complex verbs --across
-disciplines and across languages-- have considered semantic
+So far, most approaches that have dealt with complex verbs -- across
+disciplines and across languages -- have considered semantic
 transparency as the meaning relation between the whole word meaning of
 the MWE and the meaning of its base constituent, disregarding the
 contribution of the often ambiguous prefix or particle, e.g., they
 were concerned with the question: to what degree is the meaning of
 \textit{stand} reflected in \textit{understand}? Apart from a series
 of formal word-syntactic analyses in the framework of
-\textit{Discourse Representation Theory} \citep{Kamp/Reyle:93} for
+Discourse Representation Theory \citep{Kamp/Reyle:93} for
 German particle verbs with the particles \textit{auf}
-\citep{Lechler/Rossdeutscher:09}, \textit{ab} \citep{Kliche:11},
-\textit{an} \citep{Springorum:11} and \textit{nach}
-\citep{Haselbach:11}, this gap of knowledge has recently been
+\citep{Lechler/Rossdeutscher:09}, \textit{ab} \citep{Kliche:11}. \textit{nach}
+\citep{Haselbach:11} and 
+\textit{an} \citep{Springorum:11}, this gap of knowledge has recently been
 addressed from experimental perspectives: \cite{FrassinelliEtAl:17}
 demonstrated in a lexical decision experiment that the particle
 \textit{an} in German particle verbs is primarily associated with a
@@ -194,7 +191,7 @@ of the semantic base verb domains.
 \subsection{Noun compounds}
 \label{sec:compounds}
 
-Also compounds lie on a continuum between relatively transparent and
+Compounds also lie on a continuum between relatively transparent and
 rather opaque with respect to the meaning of their constituents.
 Psycholinguistic research so far has been intrigued by the question
 whether the compound is lexically represented and processed via the
@@ -221,23 +218,27 @@ noun-noun compounds in English and Italian (e.g.,
 \citealt{Smolka/Libben:17}).
 
 Computational approaches to predicting the transparency of noun
-compounds can be subdivided into two subfields: (i) approaches that
+compounds can be subdivided into two subfields:
+\begin{enumerate}
+\item approaches that
 aim to predict the \textit{meaning} of a compound by composite
 functions, relying on the vectors of the constituents (e.g.,
-\citealt{Mitchell/Lapata:10,CoeckeEtAl:11,BaroniEtAl:14b,Hermann:14});
-and (ii) approaches that aim to predict the \textit{degree of
+\citealt{Mitchell/Lapata:10,CoeckeEtAl:11,BaroniEtAl:14b,Hermann:14}); and
+\item approaches that aim to predict the \textit{degree of
   compositionality} of a compound, typically by comparing the compound
 vectors with the constituent vectors (e.g.,
-\citealt{ReddyEtAl:11a,Salehi/Cook:13,SchulteImWaldeEtAl:13,SalehiEtAl:14,SalehiEtAl:14b,SalehiEtAl:15,SchulteImWaldeEtAl:16b,Koeper/SchulteImWalde:17b}). As
-for complex verbs, the computational models typically rely to a large
+\citealt{ReddyEtAl:11a,Salehi/Cook:13,SchulteImWaldeEtAl:13,SalehiEtAl:14,SalehiEtAl:14b,SalehiEtAl:15,SchulteImWaldeEtAl:16b,Koeper/SchulteImWalde:17b}).
+
+As for complex verbs, the computational models typically rely to a large
 extent on the distributional hypothesis and empirical co-occurrence
 information from large corpora. Individual research studies noticed
 differences in the contributions of modifier and head constituents
 towards the composite functions predicting compositionality
 \citep{ReddyEtAl:11a,SchulteImWaldeEtAl:13}, but only a very limited
 number of approaches zoomed into potentially relevant properties of
-MWEs and their constituents, such as ambiguity, frequency,
+MWEs and their constituents, such as ambiguity, frequency and
 productivity \citep{Bell/Schaefer:16,SchulteImWaldeEtAl:16b}.
+\end{enumerate}
 
 In this collection, \textbf{Pezzelle and Marelli} apply a
 distributional semantic model to show that the semantic properties of
@@ -257,10 +258,10 @@ distinctions between compounds.
 
 \textbf{Iord\u{a}chioaia, van der Plas, and Jagfeld} study the
 compositionality of English deverbal compounds. These deverbal nouns
-are ambiguous between compositionally interpreted ``Argument Structure
-Nominals'', which inherit verbal structure and realise arguments
+are ambiguous between compositionally interpreted Argument Structure
+Nominals, which inherit verbal structure and realise arguments
 (e.g., \textit{assessment of the budget by the government}), and more
-lexicalized ``Result Nominals'', which preserve no verbal properties
+lexicalized Result Nominals, which preserve no verbal properties
 or arguments (e.g., \textit{budget assessment}),
 cf. \cite{Grimshaw:90}. While the former are fully compositional, the
 latter remain ambiguous because the non-head (\textit{budget}) can be
@@ -269,6 +270,8 @@ machine-learning techniques to evaluate corpus data and human
 annotations to support their hypothesis and find that different
 properties of the head contribute to the interpretation of the
 deverbal compound.
+
+In the third chapter on compounds, \textbf{Libben} investigates English compounds from a psycholinguistic perspective. He uses novel compounds such as \textit{anklecob} and \textit{clampeel}, the former being unambiguous, the latter being ambiguous in the way they can be parsed (i.e. \textit{ankle-cob} versus \textit{clam-peel} or \textit{clamp-eel}, respectively). A typing experiment shows that the typing latencies indeed peak at the morpheme boundary of nonambiguous compounds. Equivalent latencies at the critical letters of ambiguous compounds indicate that they are parsed in both possible reading ways. Libben refers to the heuristics of his Fuzzy Forward Lexical Activation account, which assumes that MWEs are parsed from left to right for any possible word combination. He concludes that complex words are not static representations but rather patterns of actions.
 
 Two papers deal with MWEs that are untypical compound constructions
 for which linguistic theories in general refer to the notions of
@@ -319,12 +322,12 @@ and the modification of an idiomatic constituent is assumed to change
 the figurative meaning into a literal meaning.
 
 The processing and representation of idioms has thus remained an
-unsettled issue in psycholinguistic research: How is the figurative
+unsettled issue in psycholinguistic research: how is the figurative
 meaning processed and stored in lexical memory? In particular, is the
 figurative meaning of an idiom represented separately from the meaning
 of its constituents, and how is the figurative meaning assembled
 (e.g., \citealt{Cacciari/Tabossi:88, Gibbs:92, Cacciari/Glucksberg:94,
-  Titone/Connine:99, Hamblin/Gibbs:03}). Seminal studies thus assumed
+  Titone/Connine:99, Hamblin/Gibbs:03})? Seminal studies thus assumed
 a ``non-compositional'' representation in which the whole figurative
 meaning of an idiom is stored as a distinct entry in the mental
 lexicon similar to the representation of a complex word like
@@ -332,7 +335,7 @@ lexicon similar to the representation of a complex word like
 authority' (e.g., \citealt{Bobrow/Bell:73, Swinney/Cutler:79,
   Gibbs:80}). More recent hybrid models try to integrate the
 assumption that idioms are both compositional and unitary: On the one
-hand each, an idiom is composed of single constituents that are
+hand, an idiom is composed of single constituents that are
 activated to some degree, and on the other hand each idiom possesses
 its own lexical entry that stores the whole meaning of the idiom
 (e.g., \citealt{Cacciari/Tabossi:88, GibbsEtAl:89, Cutting/Bock:97,
@@ -357,7 +360,7 @@ provide some insight into the flexibility of MWE constituents and
 their meaning contributions.
 
 The last paper by \textbf{Smolka and Eulitz} deals with idioms and how
-the meaning of the constituents adds to the figurative meaning. They
+the meaning of the constituents contributes to the figurative meaning. They
 present three experiments, in which participants rate the meaning
 similarity between an idiomatic phrase (e.g., \textit{She always
   reached for the stars}) and a paraphrase of its figurative meaning
@@ -366,14 +369,13 @@ exchange the noun, verb, or prepositional idiomatic constituent by a
 close semantic associate (e.g., \textit{She always reached/grasped
   for/at the stars/planets}) and find that a modified constituent
 still preserves the figurative meaning. This study adds to the
-understanding that there is no completely fixed ``unitary entry'' and
+understanding that there is no completely fixed unitary entry and
 that the idiomatic constituents do contribute to the figurative
 meaning of the idiom, even though the figurative meaning is
 semantically opaque.
 
 
-% % % \vspace{+5mm}
-%\clearpage
+\vspace{+5mm}
 \section*{Acknowledgements}
 
 This collection was supported by the DFG Collaborative Research Centre
@@ -408,7 +410,7 @@ fields who ensured a qualitatively high-standing reviewing process:
 % \clearpage
 % Bibliography:
 
-% % % \vspace{+5mm}
+\vspace{+5mm}
 {\sloppy \printbibliography[heading=subbibliography,notkeyword=this]}
 
 
