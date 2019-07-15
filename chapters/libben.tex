@@ -24,7 +24,7 @@ It might be worthwhile to begin with a non-laboratory example of the type of lex
 
 \textit{Fantasteak} is a highly complex and ambiguous multiword expression. It has multiple interpretations that trade on the activation of subwords such as \textit{steak}, \textit{teak} and the drink \textit{Fanta}, as well as orthographic and phonological similarity to the whole word \textit{fantastic}.  This suggests great voracity in the activation of subwords. Yet, not all subwords of the string appear to be activated. The string \textit{Fantasteak} also contains the substrings \textit{fan,} \textit{ant}, \textit{taste}, and \textit{tea}.  Although these are, on average, higher in frequency than either \textit{steak} or \textit{teak}, they seem to be relatively inaccessible within the string. The goal of this chapter is to explain why.  Why is it that some substrings of ambiguous and unambiguous compounds are activated, why other substrings are not activated, and what can this tell us about the fundamental nature of cognitive operations involved in lexical processing?
 
-\todo[inline]{Did you to cite T\&F 1976?}
+\todo[inline]{Did you mean to cite T\&F 1976?}
 
 Understanding how novel morphologically complex words are parsed is key to understanding how people expand their vocabularies and indeed how morphological productivity enables new words to enter the language.  There seems to be good reason to believe that this morphological parsing and the activation of lexical substrings that it entails is not as simple and rigid as was previously thought.  As \citet{Libben2015} notes, this progression can be seen by tracing developments in the field starting with \citet{TaftForster1975}. They contrasted stimulus pairs such as \textit{replicate} and \textit{repertoire}, arguing that a word such as \textit{replicate} is perceived by native speakers of English as prefixed, whereas a word such as \textit{repertoire} is not prefixed. They predicted that, as a result, the novel prefixed form \textit{deplicat}e (containing the prefix \textit{de}{}- and an existing morphological substring \textit{plicate}) will appear to be more word-like than the novel prefixed form \textit{depertoire} (which does not contain an existing morphological substring). Indeed, \citet{TaftForster1975} reported elevated rejection latencies for strings such as \textit{deplicate} in a lexical decision task.
 
@@ -50,8 +50,14 @@ Findings such as these call into question the assumption that a given word will 
 \begin{figure}
 %%please move the includegraphics inside the {figure} environment
 %%\includegraphics[width=\textwidth]{figures/PMW18paperLibben-img001.emf}
- 
-
+    \begin{tikzpicture}[rotate=45,transform shape]
+    \draw [draw,fill=lsLightGray,even odd rule,name=nucleus]  (0,0) circle (3mm)  (0,0) circle (.5mm);
+    \coordinate (nucleus) at (0,0);
+    \node [right=3mm of nucleus.east] {[formal][ity]};
+    \node [left=3mm of nucleus.west,anchor=east] {[form][al][ity]};
+    \node [below=3mm of nucleus.south,rotate=-90,anchor=west] {[formality]};
+    \node [above=3mm of nucleus.north,rotate=-90,anchor=east] {[form][ality]};
+    \end{tikzpicture}
 \caption{\label{fig:libben:1}An example lexical superstate representation. The word \textit{formality}, in this example, can be undecomposed, fully decomposed, have a suffix string (\textit{{}-ality}) or a complex stem (\textit{formal}).}
 \end{figure}
 
@@ -59,17 +65,36 @@ Lexical superstate representations can also be effective in capturing the struct
 
 
 \begin{figure}
-%%please move the includegraphics inside the {figure} environment
-%%\includegraphics[width=\textwidth]{figures/PMW18paperLibben-img002.emf}
- 
-
+    \begin{tikzpicture}[rotate=45,transform shape]
+    \draw [draw,fill=lsLightGray,even odd rule,name=nucleus]  (0,0) circle (3mm)  (0,0) circle (.5mm);
+    \coordinate (nucleus) at (0,0);
+    \node [right=3mm of nucleus.east] {[unlock][able]};
+    \node [left=3mm of nucleus.west,anchor=east] {[un][lock][able]};
+    \node [below=3mm of nucleus.south,rotate=-90,anchor=west] {[unlockable]};
+    \node [above=3mm of nucleus.north,rotate=-90,anchor=east] {[un][lockable]};
+    \end{tikzpicture}
 \caption{\label{fig:libben:2}Superstate representations for the structurally ambiguous word \textit{unlockable}.}
 \end{figure}
 
 \begin{figure} 
-%%please move the includegraphics inside the {figure} environment
-%%\includegraphics[width=\textwidth]{figures/PMW18paperLibben-img003.emf}
-
+    \centering
+    \begin{minipage}{.5\linewidth}%
+    \begin{tikzpicture}
+    \draw [draw,fill=lsLightGray,even odd rule,name=nucleus]  (0,0) circle (3mm)  (0,0) circle (.5mm);
+    \coordinate (nucleus) at (0,0);
+    \node [above right= .5\baselineskip and 3mm of nucleus.north east,anchor=west,rotate=45] {[Fanta][steak]};
+    \node [above left= .5\baselineskip and 3mm of nucleus.north west,anchor=east,rotate=-45] {[Fantas][teak]};
+    \node [below=3mm of nucleus.south,rotate=-90,anchor=west] {[Fantas][steak]};
+    \node (fantastic) [above=3\baselineskip of nucleus.north] {\itshape fantastic};
+    \draw[dotted,thick] (fantastic) -- (nucleus.north) +(0,-3mm);
+    \end{tikzpicture}\end{minipage}\begin{minipage}{.5\linewidth}%
+    \begin{tikzpicture}
+    \draw [draw,fill=lsLightGray,even odd rule,name=nucleus]  (0,0) circle (3mm)  (0,0) circle (.5mm);
+    \coordinate (nucleus) at (0,0);
+    \node [above right= .5\baselineskip and 3mm of nucleus.north east,anchor=west,rotate=45] {[clamp][eel]};
+    \node [above left= .5\baselineskip and 3mm of nucleus.north west,anchor=east,rotate=-45] {[clam][peel]};
+    \node [below=3mm of nucleus.south,rotate=-90,anchor=west] {[clamp][peel]};
+    \end{tikzpicture}\end{minipage}
 \caption{\label{fig:libben:3}Superstate representations for novel compounds. Fantasteak is shown on the left.  The dotted line indicates an association to the existing words such as \textit{fantastic}.  Clampeel is shown on the right.}
 \end{figure}
 
@@ -178,7 +203,7 @@ As can be seen in \figref{fig:libben:4}, the non-ambiguous stimuli (e.g., \texti
 
 \begin{sidewaystable}
 \caption{Fixed effects of the predictors in the linear mixed effects model for letter typing times. (Note: \text{*} = $p < 0.05$; \text{**} = $p < 0.01$; $\text{***} = p < 0.001$).\label{tab:libben:5}\todo[inline]{There is a dot in row 2, last col}}
-\begin{tabular}{clSSSSSl}
+\begin{tabular}{clSSSSS[table-format=<1.3]l}
 \lsptoprule
  ID & Factor and level names &  {Estimate} &  {Std. Error} &  {df} &  {\textit{t}-value} &  {$p$} & \\\midrule
  1 & (Intercept) &  618.8 &  131.3 &  61.5 &  4.7 &  >.001 & ***\\
@@ -188,8 +213,8 @@ As can be seen in \figref{fig:libben:4}, the non-ambiguous stimuli (e.g., \texti
  5 & Freq. of letter and its predecessor &  -22.8 &  3.5 &  1083.6 &  -6.5 &  .000 & ***\\
  6 & Freq. of letter and its successor &  -8.4 &  3.1 &  1474.2 &  -2.7 &  .008 & **\\
  7 & Freq. of bigram at boundary 1 &  16.3 &  4.9 &  40.9 &  3.3 &  .002 & **\\
- 8 & Letter is 2nd constituent onset (v. 1) &  30.9 &  13.1 &  189.3 &  2.4 &  .019 & *\\
- 9 & Letter is 2nd constituent onset (v. 2) &  43.1 &  19.8 &  64.8 &  2.2 &  .033 & *\\
+ 8 & Letter is 2nd constituent onset (v.1) &  30.9 &  13.1 &  189.3 &  2.4 &  .019 & *\\
+ 9 & Letter is 2nd constituent onset (v.2) &  43.1 &  19.8 &  64.8 &  2.2 &  .033 & *\\
  10 & Letter is 2nd constituent letter 3 (v.1) &  -31.8 &  27.6 &  48.7 &  -1.2 &  .255 & \\
  11 & Nonambiguous stimulus &  5.3 &  20.9 &  69.1 &  0.3 &  .801 & \\
  12 & Interaction of 8 X 11 &  59.2 &  17.2 &  2288.3 &  3.4 &  .001 & ***\\
