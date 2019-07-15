@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%     Language Science Press Master File       %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
+\PassOptionsToPackage{issueandeditor=true}{biblatex} % Print issuetitle
 \documentclass[output=book
 		,modfonts
 		,nonflat
@@ -10,6 +10,8 @@
 	    ,collectiontoclongg
  	    ,biblatex  
  	    ,arseneau
+ 	    ,draftmode
+ 	    ,colorlinks
 		  ]{langsci/langscibook}                              
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -19,13 +21,13 @@
 \input{localcommands.tex} 
 
 \addbibresource{chapters/prefaceEd.bib}
-%\addbibresource{chapters/springorum.bib}
-%\addbibresource{chapters/libben.bib}
-%\addbibresource{chapters/pezzele.bib}
-%\addbibresource{chapters/gianina.bib}
-%\addbibresource{chapters/henneke.bib}
-%\addbibresource{chapters/gagne.bib} 
-%\addbibresource{chapters/smolka.bib}
+\addbibresource{chapters/springorum.bib}
+\addbibresource{chapters/libben.bib}
+\addbibresource{chapters/pezzele.bib}
+\addbibresource{chapters/gianina.bib}
+\addbibresource{chapters/henneke.bib}
+\addbibresource{chapters/gagne.bib} 
+\addbibresource{chapters/smolka.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Frontmatter                      %%% 
@@ -33,7 +35,6 @@
 \begin{document}         
 \maketitle                
 \frontmatter
-% %% uncomment if you have preface and/or acknowledgements
 
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
 {\sloppy\tableofcontents}
@@ -50,15 +51,13 @@
 %%%             Chapters                         %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\includepaper{chapters/libben}
-%\includepaper{chapters/springorum}
-%\includepaper{chapters/pezzele}
-%\includepaper{chapters/gianina}
-%\includepaper{chapters/henneke}
-%\includepaper{chapters/gagne}
-%\includepaper{chapters/smolka}
-
-% copy the lines above and adapt as necessary
+\includepaper{chapters/libben}
+\includepaper{chapters/springorum}
+\includepaper{chapters/pezzele}
+\includepaper{chapters/gianina}
+\includepaper{chapters/henneke}
+\includepaper{chapters/gagne}
+\includepaper{chapters/smolka}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Backmatter                       %%% 
