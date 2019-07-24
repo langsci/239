@@ -1340,10 +1340,83 @@ domains. In all three domains, the participants agreed on the two
 \textci{dia-down-right}), although the PVs in the experiment were
 assigned to different lexical semantic classes by \cite{Kliche:11}.
 
-\begin{figure}[htbp]
+\begin{figure}
   \caption{Concept image selection for \textit{ab} across BV domains.}
   \label{fig:particle-prop-domain-ab}
   \includegraphics[width=0.55\linewidth]{figures/dataset_particles_domains_ab}
+\begin{tikzpicture}
+	\begin{axis}[
+	colormap name=langscicolormap,
+	height=.6\textheight,
+	width=.75\textwidth,
+	enlargelimits=-.1,
+	xticklabels={Force,MnT,Sound},
+	yticklabels={vert-up,vert-down,hori-right,hori-left,dia-down-right,dia-down-left,dia-up-right,dia-up-left,vert-out,hori-out,dia-out-up-right,dia-out-up-left,vert-in,hori-in,spiral-out,spiral-in},
+	ticklabel style={font=\footnotesize},
+	tick style={draw=none},
+	xtick=data,
+	ytick=data,
+	every node near coord/.style={font=\footnotesize,anchor=base,yshift=-.25\baselineskip}
+	]
+	\addplot[
+	matrix plot,
+	nodes near coords,
+	mesh/cols=3,
+	mesh/rows=16,
+	nodes near coords style={/pgf/number format/.cd,fixed,precision=6},
+	point meta=explicit] table[meta=value]{
+		x	y	value
+		0	0	0.003
+		1	0	0.028
+		2	0	0.017
+		0	1	0.148
+		1	1	0.172
+		2	1	0.128
+		0	2	0.049
+		1	2	0.044
+		2	2	0.051
+		0	3	0.056
+		1	3	0.015
+		2	3	0.019
+		0	4	0.153
+		1	4	0.166
+		2	4	0.177
+		0	5	0.071
+		1	5	0.084
+		2	5	0.076
+		0	6	0.069
+		1	6	0.038
+		2	6	0.057
+		0	7	0.02
+		1	7	0.02
+		2	7	0.011
+		0	8	0.044
+		1	8	0.066
+		2	8	0.038
+		0	9	0.092
+		1	9	0.111
+		2	9	0.073
+		0	10	0.019
+		1	10	0.033
+		2	10	0.029
+		0	11	0.028
+		1	11	0.045
+		2	11	0.036
+		0	12	0.067
+		1	12	0.006
+		2	12	0.017
+		0	13	0.104
+		1	13	0.023
+		2	13	0.034
+		0	14	0.035
+		1	14	0.094
+		2	14	0.136
+		0	15	0.042
+		1	15	0.055
+		2	15	0.101
+	};
+	\end{axis}
+	\end{tikzpicture}
 \end{figure}
 
 Looking into specific PVs with strong preferences for the two
