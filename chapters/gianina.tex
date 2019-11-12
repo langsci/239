@@ -281,7 +281,7 @@ Agent-oriented adjectives like \textit{deliberate, intentional, careful} are als
 \end{xlist}}
 \end{exe}
 
- {Finally, Grimshaw argues that, due to their verbal structure, ASNs, in general, disallow plural marking, and when plural is available it indicates an RN reading. This is illustrated in (\ref{ex:plural}) from \citet[54]{grimshaw:90}. Related to this and the aspectual contrast in (\ref{ex:aspect}), Grimshaw notes that aspectual modifiers like \textit{constant, frequent} will combine with a singular ASN, but with a plural RN. These modifiers require habitual/iterative aspect, which is made available by the event structure of ASNs, but not by the lexicalized RNs. The latter need the plural to contribute the iterative meaning: see (\ref{ex:constant}a)/(\ref{ex:constant}c)--(\ref{ex:constant}b).}
+ {Finally, Grimshaw argues that, due to their verbal structure, ASNs, in general, disallow plural marking, and when plural is available it indicates an RN reading. This is illustrated in (\ref{ex:plural}) from \citet[54]{grimshaw:90}. Related to this and the aspectual contrast in (\ref{ex:aspect}), Grimshaw notes that aspectual modifiers like \textit{constant, frequent} will combine with a singular ASN, but with a plural RN. These modifiers require habitual/iterative aspect, which is made available by the event structure of ASNs, but not by the lexicalized RNs. The latter need the plural to contribute the iterative meaning: see (\ref{ex:constant}a)/(\ref{ex:constant}b--c).}
 
 \begin{exe}
 \ex{\label{ex:plural}
@@ -437,7 +437,7 @@ The nouns were selected such that their base verbs present transitive uses, maki
 \begin{table}
 \caption{\label{tab:2:nouns}Samples of extracted deverbal nouns}
 \resizebox{\textwidth}{!}{\begin{tabular}{llllll}
-\lsptoprule  Frequency & AL & ANCE & (AT)ION & ING & MENT \\ \midrule
+\lsptoprule  Frequency & \textit{-al} & \textit{-ance} & \textit{-(at)ion} & \textit{-ing} & \textit{-ment} \\ \midrule
 %&spending & production & enforcement & proposal & insurance\\
 High & approval & performance & protection & building & development \\
 & withdrawal & assistance & reduction & training  & movement \\
@@ -624,7 +624,7 @@ For example, we matched \emph{security training(s)}, but not \emph{airport secur
 We counted a DC (or its head noun) as being in a syntactic relation with an \textit{of}-phrase or \textit{by}-phrase,  if it (or its head) governed a collapsed dependency labeled ``prep\_of''/``prep\_by''\footnote{By conflating dependencies involving prepositions or conjuncts, collapsed dependencies directly link content words.
 This simplifies the extraction patterns, as we can obtain the complement of the prepositional phrase depending on the noun or the DC, by following a single dependency arc.}, as in Figure~\ref{fig:patterns-compound-phrases}.
 Since we were  interested in prepositional phrases that realize internal or external arguments, but not in 
-temporal phrases (e.g., \lq by Monday\rq)~or fixed expressions (e.g., \lq of age\rq, \lq by chance\rq), we excluded phrases headed by words that typically appear in these undesired constructions. We semi-automatically compiled these lists based on a multiword expression lexicon\footnote{\url{http://www.cs.cmu.edu/~ark/LexSem/}} and manually added entries. To compute the feature \textit{sum\_adjectives} we counted how often each noun outside a DC governs a dependency relation labeled ``amod'', where the dependent is an adjective (POS~tag JJ) out of the lemmas \textit{intentional, deliberate, careful, constant}, and \textit{frequent}.
+temporal phrases (e.g., \textit{by Monday}~or fixed expressions (e.g., \textit{of age}, \textit{by chance}), we excluded phrases headed by words that typically appear in these undesired constructions. We semi-automatically compiled these lists based on a multiword expression lexicon\footnote{\url{http://www.cs.cmu.edu/~ark/LexSem/}} and manually added entries. To compute the feature \textit{sum\_adjectives} we counted how often each noun outside a DC governs a dependency relation labeled ``amod'', where the dependent is an adjective (POS~tag JJ) out of the lemmas \textit{intentional, deliberate, careful, constant}, and \textit{frequent}.
 
 
 
@@ -995,7 +995,7 @@ By comparison to the previous NLP work on  {the transparency of (root)} compound
 \end{multicols}
 
 \section*{Acknowledgements}
-We are grateful to Katherine Fraser, Bethany Lochbihler and Whitney Frazier Peterson for annotating our database, to Kerstin Eckart and the INF project in the SFB 732 for important technical support, and to Alla Abrosimova for help with further technical details. This research has been funded by the German Research Foundation (DFG) via a grant offered to the Projects B1 \textit{The Form and Interpretation of Derived Nominals} and D11 \textit{A Crosslingual Approach to the Analysis of Compound Nouns}, as part of the SFB 732 \textit{Incremental Specification in Context} at the University of Stuttgart.
+We are grateful to Katherine Fraser, Bethany Lochbihler and Whitney Frazier Peterson for annotating our database, to Kerstin Eckart and the INF project in the SFB 732 for important technical support, and to Alla Abrosimova for help with further technical details. This research has been funded by the German Research Foundation (DFG) via a grant offered to the projects B1 \textit{The form and interpretation of derived nominals} and D11 \textit{A crosslingual approach to the analysis of compound nouns}, as part of the SFB 732 \textit{Incremental specification in context} at the University of Stuttgart.
 
 % Bibliography:
 {\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
