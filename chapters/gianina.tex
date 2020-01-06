@@ -81,9 +81,7 @@ DCs are noun-noun compounds with a deverbal head as illustrated in (\ref{1}). In
 \ex{\textit{police} question\textbf{ing} -- \textit{police} questions sb.\  \hfill (Subject)}
 \ex{\textit{college} educat\textbf{ion} -- to educate sb.\ in \textit{college} \hfill (Adjunct)}
 \end{xlist}}
-\end{exe}
 
-\begin{exe}
 \ex{\label{2}
 \begin{xlist}
 \ex{\label{2a} train station, bookstore}
@@ -207,7 +205,7 @@ To test this hypothesis, we  use a series of morphosyntactic properties that Gri
 
 Given our hypothesis and methodology, we expect that the ASN-features extracted from the corpus, as well as that based on human judgments, will point to an object interpretation of the DC (as predicted by \ref{tree}) and will have high predictive power in determining whether the DC's non-head is an object or not. A high predictive power of the features will additionally show us that compositionality is an important aspect in the disambiguation of DCs.
 
-First of all, our results indicate that all the ASN-hood features have predictive power above the chance level when tested individually and  together. The most stable individual features point to an object interpretation, as expected under our hypothesis. Second, the ablation experiments  show that many features overlap in the identification of ASN-hood, inviting to theoretical reflection on  the individual contribution of these features. Third, the best feature is the manual annotation of ASN-hood,  which confirms the importance of this property for interpreting DCs;  it also indicates that either the morphosyntactic features are comparatively weaker or our corpus did not offer enough material for better results. Fourth, some weaker features raise stimulating questions especially relevant for linguistic investigation.
+First of all, our results indicate that all the ASN-hood features have predictive power above the chance level when tested individually and  together. The most stable individual features point to an object interpretation, as expected under our hypothesis. Second, the ablation experiments  show that many features overlap in the identification of ASN-hood, inviting to theoretical reflection on  the individual contribution of these features. Third, the best feature is the manual annotation of ASN-hood,  which confirms the importance of this property for interpreting DCs;  it also indicates that either the morphosyntactic features are comparatively weaker or our corpus did not offer enough material for better results. Fourth, some weaker features raise stimulating questions especially relevant for linguistic investigation.\largerpage
 
  Our study investigates transparency strictly from the perspective of the compositional structure in  (\ref{tree}). The degree of (lexico-semantic) transparency of DCs that do not receive such a verb-related compositional interpretation (i.e., those headed by RNs) goes beyond the scope of our present study and must be left for a future endeavor. As mentioned above, the role of world knowledge and context is essential for such DCs. Therefore, such an investigation would need to employ a different methodology, more similar to that pursued in several computational studies as presented in \sectref{sec:NLP:lit:compositional}. We also do not aim to measure speaker intuitions about the transparency degrees of DCs (as done in some of these computational approaches), although it would be interesting to compare such ratings with our relation-based annotations  in the future. Our present study conceptually differs from these computational approaches, as it addresses the transparency of DCs from a structural perspective. We use insights from theoretical linguistics on the morphosyntactic properties of the deverbal noun heads of DCs and general principles of syntax-semantics mapping, and test these theoretical hypotheses  with corpus-based and computational methods.
 
@@ -290,9 +288,7 @@ Agent-oriented adjectives like \textit{deliberate, intentional, careful} are als
 \ex[*]{The \textit{assignments of the problems} took a long time.\hfill (ASN)}
 \ex[]{The \textit{assignment of that problem} always causes problems.\hfill (ASN)}
 \end{xlist}}
-\end{exe}
 
-\begin{exe}
 \ex{\label{ex:constant}
 \begin{xlist}
 \ex[*]{The \textit{constant} assignment is to be avoided.\hfill (RN)}
@@ -356,10 +352,10 @@ As evidence, she quotes DCs  as in~(\ref{11}), parallel to those in~(\ref{1}b), 
 
 Some criticism and re-interpretation of Borer's facts is found in \cite{iordachioaia:alexiadou:pairamidis:17} and \cite{iordachioaia:toappear}.
 We briefly note here that aspectual adverbials are barely ever attested in corpora even with ASNs \citep[39--42]{lieber:16}, so an extensive empirical study is necessary to determine how much DCs differ from ASNs in this respect.
-Furthermore, \textit{by}-phrases are broadly attested with DCs in corpora, as Grimshaw's~(\ref{8}b) also predicts, but they usually involve bare plurals and not definite noun phrases or proper names as in Borer's~(\ref{10}c-d).
+Furthermore, \textit{by}-phrases are broadly attested with DCs in corpora, as Grimshaw's~(\ref{8}b) also predicts, but they usually involve bare plurals and not definite noun phrases or proper names as in Borer's~(\ref{10}c--d).
 Given that DCs are often generic, this restriction is natural.
 
-Having summarized these two  theoretical approaches to DCs, we may add that we do not aim to argue for one or the other. Instead, we use morphosyntactic properties whose pertinence for ASN-hood is accepted by both to guide us in evaluating the impact of the head noun on the interpretation of the DC. Our hypothesis that a high level of ASN-hood in DC heads correlates with an object reading of the non-heads, however, follows Grimshaw's intuition that \lq true\rq\  DCs involve ASN heads and are fully compositional. By contrast, Borer's claim is that DCs are always ambiguous like RCs and never as compositional as ASNs.
+Having summarized these two  theoretical approaches to DCs, we may add that we do not aim to argue for one or the other. Instead, we use morphosyntactic properties whose pertinence for ASN-hood is accepted by both to guide us in evaluating the impact of the head noun on the interpretation of the DC. Our hypothesis that a high level of ASN-hood in DC heads correlates with an object reading of the non-heads, however, follows Grimshaw's intuition that ``true''  DCs involve ASN heads and are fully compositional. By contrast, Borer's claim is that DCs are always ambiguous like RCs and never as compositional as ASNs.
  {Given that our results support the correlation between ASN-properties and an object reading in DCs, they also bring some evidence against Borer's analysis.}
 
 \subsection{Computational approaches to compounds}\label{sec:NLP:lit}
@@ -389,7 +385,7 @@ These works  compare different types of mathematical functions for the combinati
 
 The other line of work aims to predict the degree of  {lexico-semantic transparency}  {(i.e., what they call ``compositionality''; cf.~\sectref{sec:intro:compositionality})} of compounds. For this, they compare the vector-based representations of the parts and composite functions  {to} the vector-based representations of the compound as a whole, e.g., \cite{SchulteImWaldeEtAl:16,Reddy:2011}. 
 
-This  second line of work also draws upon psycholinguistic insights,  such as~\citet{Libben:1997,Libben:2003}, which groups noun-noun compounds into four different categories, depending on the transparency of the head and the non-head.
+This  second line of work also draws upon psycholinguistic insights,  such as \citet{Libben:1997,Libben:2003}, which groups noun-noun compounds into four different categories, depending on the transparency of the head and the non-head.
 The four classes are:
  {\textsc{tt}} for compounds with both a transparent head and non-head,
  {\textsc{oo}} for compounds with opaque heads and non-heads,
@@ -422,7 +418,7 @@ The POS tags adhere to the Penn Treebank tagset~\citep{Santorini:93}; the depend
 As news outlets often repeat news items in subsequent news streams, the corpus contains a considerable amount of duplication. To improve the reliability of our corpus counts,  we removed exact duplicate sentences within each of the 1010~corpus files, reducing the corpus size by 16\%.
 
 
-\subsection{Extraction of deverbal compounds}\label{sec:extraction:dcs}
+\subsection{Extraction of deverbal compounds}\label{sec:extraction:dcs}\largerpage
 We created a balanced collection of DCs, which we extracted from the Gigaword corpus. We first gathered 25 nouns (over three frequency bands: high, medium, low) for each of the suffixes \textit{-al}, \textit{-ance}, \textit{-ion}, \textit{-ing}, and \textit{-ment}. The highest frequency band ranges from 4.5 to 3.5 on the Zipf-scale \citep{VanHeuven:2014}, the medium frequency band ranges from 3 to 2.5, and the lowest one from 2 to 1.5. 
 The suffixes may form both ASNs and RNs according to \cite{grimshaw:90}. 
 
@@ -469,7 +465,7 @@ Low & retrieval & defiance & demolition & weighting & reinforcement \\
 \end{tabular}}
 \end{table}
 
-\subsection{Annotation and post-processing of DCs}\label{sec:annotation}
+\subsection{Annotation and post-processing of DCs}\label{sec:annotation}\largerpage
 \subsubsection{Interpretation of (non-heads in) DCs}\label{sec:annotation:relation}
 All DCs were annotated by three trained American English speakers, who had a university level background in  linguistics. They had to label the DCs as \textsc{obj}(ect), \textsc{subj}(ect), \textsc{other}, or \textsc{error}, depending on the syntactic relationship that they considered the DC to establish between the base verb of the head noun and the non-head.
 For instance, DCs such as in (\ref{1}) would be labeled as \textsc{obj} (\ref{1}a), \textsc{subj} (\ref{1}b), and \textsc{other} (\ref{1}c).
@@ -487,7 +483,7 @@ After removing the disagreements, the two ambiguous DCs and the errors, we obtai
 
 We kept two versions of the data: one in which  {the classes} \textsc{other} and \textsc{subj} are separate and one in which we conflated them to \textsc{nobj} (non-object). Given the purpose of this paper, i.e., verifying to what extent the \textsc{obj} reading of a DC correlates with particular morphosyntactic properties of the head noun, we focus here on the binary classification. The resulting data set is skewed with \textsc{obj} prevailing: 1377~\textsc{obj} and 690~\textsc{nobj}.
 
-\subsubsection{Process vs.\ result readings in DCs}\label{sec:annotation:p-r}
+\subsubsection{Process vs.\ result readings in DCs}\label{sec:annotation:p-r}\largerpage
 An additional annotation task concerned feature ``7.~\textit{process-vs-result}'' from~\tabref{tab:3:features} in \sectref{sec:theory:features}{. This feature} was designed to capture the three annotators' judgments with respect to how close the interpretation of the DC comes to the ASN and the verbal expression of a process/event in which the non-head is realized as \textsc{subj}, \textsc{obj}, or \textsc{other}.
 They had to rate DCs from 5~(very prominent process) to~1~(no process = result)~(see~\citealt{grimshaw:90}). 
 
@@ -498,7 +494,7 @@ We then instructed the annotators to check this contrast in DCs like \textit{tas
 During this task, the annotators had access to their previous  {\textsc{subj}/\textsc{obj}/\textsc{other} annotation} labels  for each DC and could compare different DCs headed by the same head noun. In terms of the variation of ratings between DCs headed by the same noun, one annotator in particular assigned pretty similar scores, although the contrast was clear. This annotator also showed a  tendency towards the extremes: either 5 or 1. In general, the task was perceived as difficult, especially by this annotator. We multiplied the scores from 5~to~1 by~20 to use them as percentages. For each DC we calculated the average between the three annotations obtaining values between~20 and~100. 
  
  
-\section{Feature selection}\label{sec:features}
+\section{Feature selection}\label{sec:features}\largerpage
 \subsection{Theoretical considerations}\label{sec:theory:features}
 To collect information on the properties of the head nouns in DCs, we defined a total of nine features, given in \tabref{tab:3:features}. 
 
@@ -517,7 +513,7 @@ Feature label & Description and illustration\\ \midrule
 5.\ \textit{{\em by}\_inside\_DC}\newline($\approx$ 2.~\textit{{\em by}\_outside\_DC}) & Percentage of the head's occurrences as singular inside compounds which realize a  syntactic relation with a \textit{by}-phrase. E.g., \textit{task assignment \textbf{by} teachers}\\ \tablevspace
 6.\ \textit{sg\_inside\_DC}\newline($\approx$ 4.~\textit{sg\_outside\_DC}) & Percentage of the head's occurrences as singular inside compounds.\\\tablevspace
 7.\ \textit{process-vs-result}\newline($\approx$ ASN vs.~RN) & Native speaker annotation of each DC as a process (\textit{car driving}) or result (\textit{apartment building})  on a scale from 5 to 1.\\\tablevspace
-8.\ \textit{suffix}\newline NEW & Suffix of the head noun: AL (rent\textbf{al}), ANCE (insur\textbf{ance}), ING (kill\textbf{ing}), ION (destruct\textbf{ion}), MENT (treat\textbf{ment})\\\tablevspace
+8.\ \textit{suffix}\newline NEW & Suffix of the head noun: \textit{-al} (rent\textbf{al}), \textit{-ance} (insur\textbf{ance}), \textit{-ing} (kill\textbf{ing}), \textit{-ion} (destruct\textbf{ion}), \textit{-ment} (treat\textbf{ment})\\\tablevspace
 9.\ \textit{head\_in\_DC}\newline NEW & Percentage of the head's occurrences within a compound out of its total occurrences in the corpus.\\ \lspbottomrule
 \end{tabularx}
 \end{table}
@@ -529,7 +525,7 @@ Feature~\textit{of\_outside\_DC} encodes the first property in~\tabref{tab:1:ASN
 
 Grimshaw's properties in \tabref{tab:1:ASN:RN} characterize deverbal nouns as ASNs when they appear on their own, i.e., \textit{outside} compounds. This is why features 1.~to 4.~are labeled correspondingly. Yet, if DCs are supposed to resemble ASNs, we considered that their head nouns should preserve these properties also within DCs, i.e., when the head noun is \textit{inside} a DC.\footnote{\cite{disciullo:92} and \cite{borer:13}  apply the same reasoning.} For this reason, we also introduced the features \textit{sg\_inside\_DC} and \textit{by\_inside\_DC}. The former measures the percentage of singular DCs out of their total occurrences, and the latter the percentage of DCs that realize a \textit{by}-phrase. We did not test \textit{of}-phrases inside DCs, since DCs usually realize the object as a non-head (see our annotation results in \sectref{sec:annotation:relation}) and collecting such occurrences would have mostly delivered noise. The adjectives modifying DCs were also left out, because their number was close to inexistent.
 
-There are two caveats to these features inspired by \cite{grimshaw:90}. First, as we noted in \sectref{sec:properties:ASN}, the individual ASN-properties are not fully reliable in determining ASN-hood: e.g., there is ambiguity in argument marking (i.e., \textit{of}- and \textit{by}-phrases), and  deverbal nouns are easily coerced between the readings. For this reason, Grimshaw used several such properties together in her examples. However, we extracted these data from corpora, and most of the attestations were too few to allow any combined patterns beyond the one we ensured -- that of a singular form of the head noun in each of the other properties. Second, and related to this, basing our study on a corpus comes with the risk that, no matter how large the corpus, it may not present enough relevant data. It was for these two reasons that we considered adding three more head-related features to our study. We first gathered native-speaker intuitions about the ASN vs.~RN status of the head nouns in DCs (see  feature~\textit{process-vs-result}) and supplemented Grimshaw's tests with information about the suffix  and the frequency of  the head noun within compounds (features~\textit{suffix} and \textit{head\_in\_DC}).
+There are two caveats to these features inspired by \cite{grimshaw:90}. First, as we noted in \sectref{sec:properties:ASN}, the individual ASN-properties are not fully reliable in determining ASN-hood: e.g., there is ambiguity in argument marking (i.e., \textit{of}- and \textit{by}-phrases), and  deverbal nouns are easily coerced between the readings. For this reason, Grimshaw used several such properties together in her examples. However, we extracted these data from corpora, and most of the attestations were too few to allow any combined patterns beyond the one we ensured -- that of a singular form of the head noun in each of the other properties. Second, and related to this, basing our study on a corpus comes with the risk that, no matter how large the corpus, it may not present enough relevant data. It was for these two reasons that we considered adding three more head-related features to our study. We first gathered native-speaker intuitions about the ASN vs.~RN status of the head nouns in DCs (see  feature~\textit{process-vs-result}) and supplemented Grimshaw's tests with information about the suffix  and the frequency of  the head noun within compounds (features~\textit{suffix} and \textit{head\_in\_DC}).\largerpage[2]
 
 We designed feature~\textit{process-vs-result} (P-R) in order to grasp Grimshaw's intuition about the contrast between ASNs and RNs by means of introspection. The process vs. result interpretation is  the fundamental difference between ASNs and RNs in Grimshaw's understanding.   It can be seen as the latent variable that her morphosyntactic properties are intended to identify: ASNs express processes or events like the corresponding verbs, while RNs depart from this meaning and express results. Following this annotation (see~\sectref{sec:annotation:p-r}), we gathered information on how salient the verbal process is in the meaning of a DC and, indirectly, how accessible the compositional structure of the base VP is within the DC.\footnote{The way we gathered estimates for our P-R feature comes close to the NLP studies which gather native speaker evaluations about the transparency of compounds. Namely, our three annotators had to evaluate how close the morphosyntactic (and semantic) relationship between the head noun and the non-head comes to the fully compositional relationship between the corresponding verb and its argument or adjunct.}
 
@@ -682,7 +678,7 @@ All features&\bfseries 78.8\\
 \end{table}
 
 
-With respect to the upper bound, we cannot directly compare the numbers in Table~\ref{tab:individual} with the IAA reported in \sectref{sec:annotation:relation}, because the data we use for testing and training includes only examples on which all annotators agree; neither can we use the 100\%~IAA on this selected test set as an upper bound. We expect the IAA for this high-agreement test set to lie between 100\% and the 81.5\% reported in §\ref{sec:annotation:relation} for the complete dataset and two annotators. The 78.8\% we attain is not too far from the upper bound we can estimate from these IAA values.\footnote{A realistic upper bound for the test set could be determined by getting an independent annotator to annotate the items in the test set and measuring the agreement with the previous annotations.  We leave this for future work.} 
+With respect to the upper bound, we cannot directly compare the numbers in Table~\ref{tab:individual} with the IAA reported in \sectref{sec:annotation:relation}, because the data we use for testing and training includes only examples on which all annotators agree; neither can we use the 100\%~IAA on this selected test set as an upper bound. We expect the IAA for this high-agreement test set to lie between 100\% and the 81.5\% reported in §\ref{sec:annotation:relation} for the complete dataset and two annotators. The 78.8\% we attain is not too far from the upper bound we can estimate from these IAA values.\footnote{A realistic upper bound for the test set could be determined by getting an independent annotator to annotate the items in the test set and measuring the agreement with the previous annotations.  We leave this for future work.}\largerpage
 
 Furthermore, the results for the individual features in Table~\ref{tab:individual} show that each feature outperforms the baselines significantly. This means that each feature contributes significantly to the prediction of the relation. The  {78.0\%} performance of the model that combines the top-2 features is comparable to the  {78.8\% of the} model that includes all features. This means that although all features contribute to the quality of the prediction of the model individually, the best features overshadow the effect of the less well-performing features. 
 
@@ -731,7 +727,7 @@ All features, except \textit{of\_outside\_DC}& 54.5 \textsuperscript{†}\\
 \end{table}
 
 
-Table~\ref{tab:prediction:all} shows the direction of the prediction of the features  {in all three models (Tables~\ref{tab:individual} to~\ref{tab:ablation:noP-R})}. In other words, it shows whether higher values of a given feature are indicating higher chances of an \textsc{obj} or \textsc{nobj} relation. We gathered these directions by inspecting the coefficients of the logistic regression model.\footnote{We inspected the weights in the models as well, but they are not very informative, because there is a high level of collinearity in the features and the weights are calculated based on all other features staying equal. For this reason we report results on single feature models and ablation tests instead.}
+Table~\ref{tab:prediction:all} shows the direction of the prediction of the features  {in all three models (Tables~\ref{tab:individual} to~\ref{tab:ablation:noP-R})}.\largerpage In other words, it shows whether higher values of a given feature are indicating higher chances of an \textsc{obj} or \textsc{nobj} relation. We gathered these directions by inspecting the coefficients of the logistic regression model.{\interfootnotelinepenalty=10000\footnote{We inspected the weights in the models as well, but they are not very informative, because there is a high level of collinearity in the features and the weights are calculated based on all other features staying equal. For this reason we report results on single feature models and ablation tests instead.}}
 
 
 \begin{table}
@@ -804,17 +800,17 @@ The confusion matrix for the feature \textit{P-R} in Table~\ref{tab:conf:p-r} co
 
 \begin{table}
 \caption{\label{tab:conf:p-r}Confusion matrix for \textit{P-R}}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-&\multicolumn{4}{c|}{\textbf{Classified as}}\\
-\hline
+\begin{tabular}{llrrr}
+\lsptoprule
+& & \multicolumn{2}{c}{Classified as}\\
+\cmidrule(lr){3-4}
 &&  \textsc{obj}&\textsc{nobj}&Totals \\    
-%\parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c] {90}{\textbf{Gold}}}} & \textsc{obj} &48 &18&66 \\
-\textbf{Gold} & \textsc{obj} &48 &18&66 \\
+\parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c] {90}{Gold}}} & \textsc{obj} &48 &18&66 \\
+% {Gold} & \textsc{obj} &48 &18&66 \\
 & \textsc{nobj}&13 & 53&66  \\
-\hline
+% % \midrule
 &Totals&61 &71&132\\
-\hline
+\lspbottomrule
 \end{tabular}
 \end{table}
 
@@ -834,7 +830,7 @@ The question is why the \textit{of\_outside\_DC} feature  does not score better 
 
   
 \begin{table}
-\caption{\label{tab:ex:of:phrases}Head nouns with (in)frequent \textit{of}-phrases. Outliers in bold}
+\caption{\label{tab:ex:of:phrases}Head nouns with (in)frequent \textit{of}-phrases. Outliers in bold.}
 \begin{tabular}{lSS}
 \lsptoprule
 {Head noun}& {\textit{of\_outside\_DC} (\%)}& {\textsc{obj}-reading (\%)}\\
@@ -859,16 +855,16 @@ The confusion matrix for the feature \textit{of\_outside\_DC} in Table~\ref{tab:
 
 \begin{table}
 \caption{\label{tab:conf:of-outside}Confusion matrix for \textit{of\_outside\_DC}}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-&\multicolumn{4}{c|}{\textbf{Classified as}}\\
-\hline
+\begin{tabular}{llrrr}
+\lsptoprule
+& & \multicolumn{2}{c}{Classified as}\\
+\cmidrule(lr){3-4}
 &&  \textsc{obj}&\textsc{nobj}&Totals \\   
-%\parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c] {90}{\textbf{Gold}}}} & \textsc{obj} &51 &15&66 \\
-\textbf{Gold} & \textsc{obj} &51 &15&66 \\
-& \textsc{nobj}&38 & 28&66  \\\hline
+\parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c] {90}{{Gold}}}} & \textsc{obj} &51 &15&66 \\
+% Gold & \textsc{obj} &51 &15&66 \\
+& \textsc{nobj}&38 & 28&66  \\
 &Totals&89 &43&132\\
-\hline
+\lspbottomrule
 \end{tabular}
 \end{table}
 
@@ -892,8 +888,8 @@ The high variation between \textsc{obj} and \textsc{nobj} readings  in \tabref{t
 The frequency of the noun head in a singular form whether outside or inside a DC yields similar accuracy levels (68.9\% in \tabref{tab:individual}, 78.8\% and 80.3\% without a significant difference in \tabref{tab:ablation:3As}, and 72\% in \tabref{tab:ablation:noP-R}). This similarity supports our assumption that within DCs the head nouns should preserve the properties from outside DCs   {(see \sectref{sec:theory:features})}. However, an interesting difference appears with respect to the direction of prediction, since only \textit{sg\_outside\_DC} constantly predicts \textsc{obj}-DCs across all the models in \tabref{tab:prediction:all}, while \textit{sg\_outside\_DC} is less reliable. This suggests that Grimshaw's morphosyntactic ASN-properties may be more reliable when the deverbal noun appears outside a DC than inside DCs.\footnote{ {The \textit{inside} features do not damage our model,} since removing \textit{sg\_inside\_DC} and \textit{by\_inside\_DC} from the ablation model yielded 77.3\% accuracy -- lower than 78.8\% for all features together, though not significantly so.} 
 
 
-\subsubsection{\textit{head\_in\_DC} (Compoundhood)} 
-As an individual feature, the accuracy of \textit{head\_in\_DC} is just above average among the other features in the present study (see \tabref{tab:individual}). Its removal in our ablation experiments  yields  slight and non-significant drops in accuracy. In \sectref{sec:theory:features}, we conjectured that an \textsc{obj} reading of DCs whose head nouns present high compoundhood would show us that a compositional construction with an object non-head is very likely to form DCs. The  direction of prediction in \tabref{tab:prediction:all} indicates that high values of this feature consistently correlate with \textsc{obj}-DCs, supporting this assumption. However, why does this feature not perform better? Our full database shows that its values are not informative enough: there are a few head nouns which display high compoundhood and frequently form \textsc{obj}-DCs, but the majority of DCs  have very low such values. Only~5.1\% of our DCs have a \textit{head\_in\_DC} value above~50\% and as many as~70.3\% of them have one under~20\%. 
+\subsubsection{\textit{head\_in\_DC} (compoundhood)} 
+As an individual feature, the accuracy of \textit{head\_in\_DC} is just above average among the other features in the present study (see \tabref{tab:individual}). Its removal in our ablation experiments  yields  slight and non-significant drops in accuracy. In \sectref{sec:theory:features}, we conjectured that an \textsc{obj} reading of DCs whose head nouns present high compoundhood would show us that a compositional construction with an object non-head is very likely to form DCs. The  direction of prediction in \tabref{tab:prediction:all} indicates that high values of this feature consistently correlate with \textsc{obj}-DCs, supporting this assumption. However, why does this feature not perform better? Our full database shows that its values are not informative enough: there are a few head nouns which display high compoundhood and frequently form \textsc{obj}-DCs, but the majority of DCs  have very low such values. Only~5.1\% of our DCs have a \textit{head\_\linebreak in\_DC} value above~50\% and as many as~70.3\% of them have one under~20\%. 
 
 \begin{table}
 \caption{\label{tab:compoundhood:ex}Head nouns with high compoundhood}
@@ -913,7 +909,7 @@ enforcement&53.7&66.6\\
 \tabref{tab:compoundhood:ex} illustrates the few head nouns that most often appear in DCs and the frequency of an \textsc{obj} reading among the DCs they appear as heads of. As visible there, a high frequency of a deverbal noun in DCs correlates with a high value for an \textsc{obj} reading of the compound's non-head, as predicted (cf.~\sectref{sec:theory:features}). 
 
 \subsubsection{\textit{sum-adjectives} and \textit{by}-phrases}\label{sec:gia:discussion-int-by}
-The last three features we employed in our study are \textit{sum-adjectives},  \textit{by\_outside\_DC} and  \textit{by\_inside\_DC}. On their own, they have some predictive power (\tabref{tab:individual}),  {but their removal in \tabref{tab:ablation:3As} has no significant impact on the results, showing that \textit{P-R} compensates for their absence. Interestingly, in the corpus-based morphosyntactic model in  \tabref{tab:ablation:noP-R}, the removal of \textit{by\_outside\_DC} triggers a significant drop, indicating that in the absence of \textit{P-R}, this feature becomes important. Yet, in spite of our expectation for this feature to identify \textsc{obj}-DCs, its direction of prediction is \textsc{nobj} in all models (see \tabref{tab:prediction:all}). As we saw in Section~\ref{sec:properties:ASN}, \textit{by}-phrases are ambiguous and their presence indicates ASN-hood only when the object argument is also realized (see \ref{ex:by}). We considered using the frequency of  \textit{by}-phrases co-occurring with \textit{of}-phrases, but the numbers were extremely low. Thus, the unexpected direction of prediction of \textit{by}-phrases might be due to their ambiguity. The other two features do not preserve the direction of prediction (\tabref{tab:prediction:all}).}
+The last three features we employed in our study are \textit{sum-adjectives},  \textit{by\_outside\_\linebreak DC} and  \textit{by\_inside\_DC}. On their own, they have some predictive power (\tabref{tab:individual}),  {but their removal in \tabref{tab:ablation:3As} has no significant impact on the results, showing that \textit{P-R} compensates for their absence. Interestingly, in the corpus-based morphosyntactic model in  \tabref{tab:ablation:noP-R}, the removal of \textit{by\_outside\_DC} triggers a significant drop, indicating that in the absence of \textit{P-R}, this feature becomes important. Yet, in spite of our expectation for this feature to identify \textsc{obj}-DCs, its direction of prediction is \textsc{nobj} in all models (see \tabref{tab:prediction:all}). As we saw in Section~\ref{sec:properties:ASN}, \textit{by}-phrases are ambiguous and their presence indicates ASN-hood only when the object argument is also realized (see \ref{ex:by}). We considered using the frequency of  \textit{by}-phrases co-occurring with \textit{of}-phrases, but the numbers were extremely low. Thus, the unexpected direction of prediction of \textit{by}-phrases might be due to their ambiguity. The other two features do not preserve the direction of prediction (\tabref{tab:prediction:all}).}
 
 
 
@@ -970,7 +966,7 @@ In addition, some tests which are popular in the theoretical literature (e.g., \
 
 By comparison to the previous NLP work on  {the transparency of (root)} compounds, we did not consider both constituents to evaluate the  mapping with the compound; we focused on the head noun, which  has a crucial influence on the relationship that it establishes with the non-head in DCs. In future work, we will consider including some predictive features of the non-head. We expect that the encyclopedic features exploited in the NLP literature such as in \cite{NicholsonBaldwin:06}, \cite{lapata:02}, and \cite{grover:lapata:lascarides:05} will benefit the disambiguation of RNs and the DCs headed by these. 
 
-%\newpage here?
+\newpage
 \section*{Abbreviations}
 \begin{multicols}{2}
  \begin{tabbing}
