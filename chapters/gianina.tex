@@ -10,7 +10,7 @@
 % \epigram{}
 
 \abstract{This paper is concerned with the compositionality of deverbal compounds such as \textit{budget assessment} in English. We present an interdisciplinary study on how the morphosyntactic properties of the deverbal noun head (e.g., \textit{assessment})  can predict the interpretation of the compound, as mediated by the syntactic-semantic relationship  between the non-head (e.g., \textit{budget}) and the head. 
-We start with \citeauthor{grimshaw:90}'s (\citeyear{grimshaw:90}) observation that deverbal nouns are ambiguous between compositionally interpreted argument structure nominals, which  inherit verbal structure and realize arguments (e.g., \textit{assessment of the budget by the government}), and more lexicalized result nominals,  which preserve no verbal properties or arguments (e.g., \textit{The assessment is on the table}). Our hypothesis is that deverbal compounds with argument structure nominal heads are fully compositional and, in our system, more easily predictable than those headed by result nominals, since their compositional make-up triggers an (unambiguous) object interpretation of the non-heads. Linguistic evidence gathered from corpora and human annotations, and evaluated with machine learning techniques supports this hypothesis. At the same time, it raises interesting discussion points on how different properties of the head contribute to the interpretation of the deverbal compound.}
+We start with \citeauthor{grimshaw:90}'s (\citeyear{grimshaw:90}) observation that deverbal nouns are ambiguous between compositionally interpreted argument structure nominals, which  inherit verbal structure and realize arguments (e.g., \textit{the} assessment \textit{of the budget by the government}), and more lexicalized result nominals,  which preserve no verbal properties or arguments (e.g., \textit{The} assessment \textit{is on the table.}). Our hypothesis is that deverbal compounds with argument structure nominal heads are fully compositional and, in our system, more easily predictable than those headed by result nominals, since their compositional make-up triggers an (unambiguous) object interpretation of the non-heads. Linguistic evidence gathered from corpora and human annotations, and evaluated with machine learning techniques supports this hypothesis. At the same time, it raises interesting discussion points on how different properties of the head contribute to the interpretation of the deverbal compound.}
 
 \begin{document}
 
@@ -570,7 +570,7 @@ temporal phrases (e.g., \textit{by Monday})~or fixed expressions (e.g., \textit{
 
 
 
-\subsubsection{Reliability of the extracted features}
+\subsection{Reliability of the extracted features}
 Our extracted features rely on the automatic corpus annotations, the manually defined extraction patterns, and, in the case of the \textit{of}-phrases and \textit{by}-phrases, on heuristics, to exclude undesired matches of temporal phrases or fixed expressions. 
 The constituency parser, which was used to obtain the syntactic analyses then converted to dependency trees, obtained an average F1-score of~91.4\% on a standard test set, Section~22 of the Wall Street Journal corpus~\citep{Huang:10}.
 
