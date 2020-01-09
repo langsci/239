@@ -9,7 +9,7 @@
 
 % \epigram{}
 
-\abstract{Classifying compound words has been the ultimate goal of much research in formal linguistics. A popular, cross-linguistically applicable classification \citep{SB2005} distinguishes three main types of compounds, namely Subordinate, Attributive, and Coordinate on the basis of the underlying \textit{syntactic} relation between the compound elements. Similar tripartitions have also been proposed in cognitive psychology by works exploring conceptual combination. Focusing on the type of \textit{semantic} interpretation assigned to novel combinations, three main classes have been traditionally described, namely Relation-linking, Property-mapping, and Hybrid or Conjunctive (see \citealt{wisniewski1996}). Based on these commonalities, we conjecture that syntax-based compound types might also be explained by means of the semantic properties of the compound and its constituents. Using a compositional model of distributional semantics (cDSM), we show that (a) the contribution of each constituent in determining the meaning of the compound and (b) the semantic similarity between the two constituent words are significant predictors of these classes. These findings suggest that the various compound types identified by syntactic criteria can also be predicted by means of semantic features. On the one hand, this confirms the validity of the proposed linguistic categorization. On the other hand, we bring further evidence proving the effectiveness of cDSMs in describing linguistic phenomena.}
+\abstract{Classifying compound words has been the ultimate goal of much research in formal linguistics. A popular, cross-linguistically applicable classification \citep{SB2005} distinguishes three main types of compounds, namely Subordinate, Attributive, and Coordinate on the basis of the underlying \textit{syntactic} relation between the compound elements. Similar tripartitions have also been proposed in cognitive psychology by works exploring conceptual combination. Focusing on the type of \textit{semantic} interpretation assigned to novel combinations, three main classes have been traditionally described, namely Relation-linking, Property-mapping,\linebreak and Hybrid or Conjunctive (see \citealt{wisniewski1996}). Based on these commonalities, we conjecture that syntax-based compound types might also be explained by means of the semantic properties of the compound and its constituents. Using a compositional model of distributional semantics (cDSM), we show that (a) the contribution of each constituent in determining the meaning of the compound and (b) the semantic similarity between the two constituent words are significant predictors of these classes. These findings suggest that the various compound types identified by syntactic criteria can also be predicted by means of semantic features. On the one hand, this confirms the validity of the proposed linguistic categorization. On the other hand, we bring further evidence proving the effectiveness of cDSMs in describing linguistic phenomena.}
 
 \shorttitlerunninghead{Do semantic features capture a syntactic classification of compounds?}
 \begin{document}
@@ -239,19 +239,19 @@ In addition to these semantic variables, compound length turns out to be also pr
 
 \subsection{Overall results}
 
-\begin{figure}
+Taken together, these results indicate that the degree of semantic similarity between the compound's constituents (i.e. the modifier and the head) is a highly reliable predictor of CRD against both other classes. As shown in the barplot in Figure~\ref{fig:bar1}, the higher the similarity between the constituents, the more a compound is likely to be CRD rather than either ATT ($p=0.0002$) or SUB ($p=0.0024$). Moreover, the semantic similarity between the compound and its head is a predictive measure of SUB over both other types, as shown in Figure~\ref{fig:bar2}. That is, the more the head contributes to the meaning of the overall compound, the more the compound is likely to be SUB rather than either ATT ($p=0.0355$) or CRD ($p=0.0146$).
+
+\begin{figure}[p]
 \begin{center}
-\includegraphics[width=9cm]{figures/barplot1.pdf}
+\includegraphics[width=7.5cm]{figures/barplot1.pdf}
 \caption{Similarity between modifier and head is predictive of CRD over both ATT and SUB.}\label{fig:bar1}
 \end{center}
 \end{figure}
 
 
-Taken together, these results indicate that the degree of semantic similarity between the compound's constituents (i.e. the modifier and the head) is a highly reliable predictor of CRD against both other classes. As shown in the barplot in Figure~\ref{fig:bar1}, the higher the similarity between the constituents, the more a compound is likely to be CRD rather than either ATT ($p=0.0002$) or SUB ($p=0.0024$). Moreover, the semantic similarity between the compound and its head is a predictive measure of SUB over both other types, as shown in Figure~\ref{fig:bar2}. That is, the more the head contributes to the meaning of the overall compound, the more the compound is likely to be SUB rather than either ATT ($p=0.0355$) or CRD ($p=0.0146$).
-
-\begin{figure}
+\begin{figure}[p]
 \begin{center}
-\includegraphics[width=9cm]{figures/barplot2.pdf}
+\includegraphics[width=7.5cm]{figures/barplot2.pdf}
 \caption{Similarity between the compound and its head is predictive of SUB over both ATT and CRD.}\label{fig:bar2}
 \end{center}
 \end{figure}
