@@ -582,7 +582,7 @@ On the other hand, we designed the pattern to maximize recall so as not to miss 
 
 
 
-\section{Data exploration with machine learning techniques}\label{sec:ML}
+\section{Data exploration with machine learning techniques}\label{sec:ML}\largerpage
 
 Our goal is to test the features listed in Table~\ref{tab:3:features}  for their predictive power in determining the relation between the head and the non-head. These features are composed of numerical (1~to~7, and~9) and categorical features~(8).
 The dependent variable is a  {binary} feature that varies between one of the two annotation labels, \textsc{obj} and \textsc{nobj}. We trained a logistic regression classifier to model the effect of these features.\footnote{We used version~3.8 for Linux of the Weka toolkit~\citep{Weka:09} and experimented with several other classifiers that have interpretable models~(decision trees), but also support vector machines and naive Bayes  {classifiers}. All of these underperformed on our test set.} 
@@ -596,11 +596,10 @@ Therefore, we balanced both the training and test set by randomly removing insta
 We compared our models with the random baseline, and two additional baselines to make sure  that the features we are proposing are not just a by-product of the impact of simpler variables. We computed the relative\footnote{By providing relative counts, we make sure these features are on the same scale as our other features.}  frequency of the head and the relative family size, i.e., how many compound types we find with a given head.\footnote{These additional baselines were computed on a slightly different test and training set, due to the random process in balancing the data.}
 
 We ran ablation experiments to determine the individual contribution of each feature in addition to the other features. However, because features might be interdependent and one feature could overshadow another, we first looked at the performance of each feature individually.
-This way, we could measure the exact predictive power of each individual feature in comparison to the baselines. Lastly, we combined the top-$n$ features from ablation experiments and individual feature experiments to see the overall predictive potential of the model.
+This way, we could measure the exact predictive power of each individual feature in comparison to the baselines. Lastly, we combined the top-$n$ features from ablation experiments and individual feature experiments to see the overall predictive potential of the model.\largerpage
 
-The first row in Table~\ref{tab:individual} shows that, when using all features, the classifier significantly outperforms\footnote{Significance numbers for these experiments, in which training and test data are fixed, were computed with a McNemar test with $p<0.05$, as it makes relatively few type~I errors~\citep{dietterich:98}.} the baselines with a large margin (78.8\%). 
-This proves that the combination of 
-features driven by linguistic theory has strong predictive power. 
+The first row in Table~\ref{tab:individual} shows that, when using all features, the classifier significantly outperforms{\interfootnotelinepenalty=10000\footnote{Significance numbers for these experiments, in which training and test data are fixed, were computed with a McNemar test with $p<0.05$, as it makes relatively few type~I errors~\citep{dietterich:98}.}} the baselines with a large margin (78.8\%). 
+This proves that the combination of features driven by linguistic theory has strong predictive power.\pagebreak
 
 \begin{table}
 \caption{\label{tab:individual}Percent accuracy for individual features. ``†'' indicates a statistically significant difference from the performance of all features. All results are statistically significant in comparison to the baselines.}
@@ -628,7 +627,7 @@ All features&\bfseries 78.8\\
 \end{table}
 
 
-With respect to the upper bound, we cannot directly compare the numbers in Table~\ref{tab:individual} with the IAA reported in \sectref{sec:annotation:relation}, because the data we use for testing and training includes only examples on which all annotators agree; neither can we use the 100\%~IAA on this selected test set as an upper bound. We expect the IAA for this high-agreement test set to lie between 100\% and the 81.5\% reported in §\ref{sec:annotation:relation} for the complete dataset and two annotators. The 78.8\% we attain is not too far from the upper bound we can estimate from these IAA values.\footnote{A realistic upper bound for the test set could be determined by getting an independent annotator to annotate the items in the test set and measuring the agreement with the previous annotations.  We leave this for future work.}\largerpage
+With respect to the upper bound, we cannot directly compare the numbers in Table~\ref{tab:individual} with the IAA reported in \sectref{sec:annotation:relation}, because the data we use for testing and training includes only examples on which all annotators agree; neither can we use the 100\%~IAA on this selected test set as an upper bound. We expect the IAA for this high-agreement test set to lie between 100\% and the 81.5\% reported in §\ref{sec:annotation:relation} for the complete dataset and two annotators. The 78.8\% we attain is not too far from the upper bound we can estimate from these IAA values.\footnote{A realistic upper bound for the test set could be determined by getting an independent annotator to annotate the items in the test set and measuring the agreement with the previous annotations.  We leave this for future work.}
 
 Furthermore, the results for the individual features in Table~\ref{tab:individual} show that each feature outperforms the baselines significantly. This means that each feature contributes significantly to the prediction of the relation. The  {78.0\%} performance of the model that combines the top-2 features is comparable to the  {78.8\% of the} model that includes all features. This means that although all features contribute to the quality of the prediction of the model individually, the best features overshadow the effect of the less well-performing features. 
 
@@ -748,7 +747,7 @@ cancer treatment&73.3& \textsc{obj} & spa treatment &46.7& \textsc{nobj}\\
 
 The confusion matrix for the feature \textit{P-R} in Table~\ref{tab:conf:p-r} confirms that the machine learning algorithm was not able to find a clear cut-off value for this feature above which we find only \textsc{obj} readings. The \textit{P-R} feature misclassifies 18 \textsc{obj}-DCs as \textsc{nobj}, and 13 \textsc{nobj}-DCs as \textsc{obj}. Examples of the former case are the \textsc{obj}-DCs in the second column of \tabref{tab:ex:p-r}, which have a low \textit{P-R} value, because they involve RN heads (see \textit{temperature reading}, \textit{alcohol tolerance}). In the latter case, the errors concern the \textsc{nobj}-DCs from the first column of \tabref{tab:ex:p-r}, which have a high \textit{P-R} value (see \textit{career counseling} and \textit{nicotine withdrawal}).
 
-\begin{table}
+\begin{table}[H]
 \caption{\label{tab:conf:p-r}Confusion matrix for \textit{P-R}}
 \begin{tabular}{llrrr}
 \lsptoprule
@@ -800,10 +799,9 @@ mongering&0& \bfseries 100\\
 The samples  in \tabref{tab:ex:of:phrases} show various mismatches between the realization of \textit{of}-phrases and the formation of \textsc{obj}-DCs. For instance, \textit{avoidance} and \textit{preservation}, which build only \textsc{obj}-DCs in our database, have fewer occurrences with an \textit{of}-phrase than \textit{creation}, which forms only~72.7\% \textsc{obj}-DCs. Moreover, \textit{proposal}, which forms a high proportion of \textsc{obj}-DCs, realizes \textit{of}-phrases  in~only~1.0\% of its occurrences. In spite of the many \textsc{obj}-DCs like  \textit{book\slash contract\slash marriage\slash investment proposal}, the verbal relation is lost in this noun. It mostly functions as an RN, i.e., it refers to the proposal made, and not to the process\slash event of proposing. In confirmation of this, these DCs received a \textit{P-R} rating as low as~20\% to~26.7\%.
 This is an example of how our individual features complement each other. 
 
-The confusion matrix for the feature \textit{of\_outside\_DC} in Table~\ref{tab:conf:of-outside} shows indeed that the model based on this feature makes many false predictions, notably, it attributes 38 \textsc{obj} readings to DCs that in fact have a \textsc{nobj} reading. This means that the prediction power of \textit{of\_outside\_DC} is misled by the presence of \textit{of}-phrases with head nouns that form \textsc{nobj}-DCs (see \tabref{tab:ex:of:phrases}). These DCs involve RN heads, which realize \textit{of}-phrases as modifiers and not object arguments. The head noun \textit{assassination} in \tabref{tab:ex:of:phrases} is one example. That this noun behaves like an RN is confirmed by the \textit{P-R} value of the DCs it forms, which is below the average of 60\%. A similar problem is posed by the DCs headed by, e.g., \textit{creation}, which also allows RN readings and forms \textsc{nobj}-DCs, in spite of the high frequency with \textit{of}-phrases (\tabref{tab:ex:of:phrases}). In these critical cases, the results in Tables~\ref{tab:ablation:3As} and~\ref{tab:ablation:noP-R} show that the other morphosyntactic features compensate for the errors made by the \textit{of\_outside\_DC} feature, helping the model.
+The confusion matrix for the feature \textit{of\_outside\_DC} in Table~\ref{tab:conf:of-outside} shows indeed that the model based on this feature makes many false predictions, notably, it attributes 38 \textsc{obj} readings to DCs that in fact have a \textsc{nobj} reading. This means that the prediction power of \textit{of\_outside\_DC} is misled by the presence of \textit{of}-phrases with head nouns that form \textsc{nobj}-DCs (see \tabref{tab:ex:of:phrases}). These DCs involve RN heads, which realize \textit{of}-phrases as modifiers and not object arguments. The head noun \textit{assassination} in \tabref{tab:ex:of:phrases} is one example. That this noun behaves like an RN is confirmed by the \textit{P-R} value of the DCs it forms, which is below the average of 60\%. A similar problem is posed by the DCs headed by, e.g., \textit{creation}, which also allows RN readings and forms \textsc{nobj}-DCs, in spite of the high frequency with \textit{of}-phrases (\tabref{tab:ex:of:phrases}). In these critical cases, the results in Tables~\ref{tab:ablation:3As} and~\ref{tab:ablation:noP-R} show that the other morphosyntactic features compensate for the errors made by the \textit{of\_outside\_DC} feature, helping the model.\largerpage
 
-
-\begin{table}
+\begin{table}[H]
 \caption{\label{tab:conf:of-outside}Confusion matrix for \textit{of\_outside\_DC}}
 \begin{tabular}{llrrr}
 \lsptoprule
@@ -903,7 +901,7 @@ so do we attribute the non-compositionality in the relation between head and com
 
 Furthermore, \cite{SchulteImWaldeEtAl:16} emphasize the importance of properties of the head and the compound, and to a lesser extent of the modifier (i.e., non-head) for the prediction of the  transparency of the compound.  The authors stress the need to carefully balance  datasets according to the empirical and semantic properties of the compounds, as well as of their heads. We have balanced our data set for corpus frequency of the head   and measured the family size of the heads. We have not measured  other properties that they have used, but will consider these in future work. 
 
-\section{Conclusions}\label{sec:conclusions}
+\pagebreak\section{Conclusions}\label{sec:conclusions}
 
 In this paper we have presented a study on the  {(syntactic)} compositionality of DCs, as predictable from the morphosyntactic properties of their head nouns. We have employed theoretical insights on the behavior of deverbal nominals, on the basis of which we collected corpus data, as well as manual annotations. We used this data collection in the form  of indicative features in a logistic regression model, by means of which we evaluated the prediction power of each feature for the \textsc{obj} (vs.~\textsc{nobj}) interpretation of the compounds. 
 

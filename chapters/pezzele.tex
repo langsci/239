@@ -106,7 +106,7 @@ The method used in the present study, in particular, was implemented by \cite{gu
 In the present study, we trained the compositional model with a list of English noun-noun compounds extracted from the CELEX English Lexical Database \citep{celex}. By default, we treated all compounds as written in \emph{solid} form, that is, without whitespaces or hyphens between the two constituents. When the solid compound was not found in our semantic space, we looked for it in its hyphenated form. The training set included 2174 triplets ⟨modifier, head, compound⟩, none of which was also present in the dataset we obtained from MorBoComp. We then used the estimated weight matrices for generating composed representations for each of the 132 compounds in our sample.
 
 
-\subsection{Semantic variables}
+\subsection{Semantic variables}\largerpage
 
 For each vector obtained compositionally, we computed four composition-based semantic measures, namely (1) similarity between the composed representation of the compound and its modifier (e.g. between \emph{keyword} and \emph{key}), (2) similarity between the composed representation of the compound and its head (e.g. between \emph{keyword} and \emph{word}), (3) neighborhood density, that is, the average cosine similarity between the composed vector and its top-10 nearest neighbor vectors in the semantic space (all these 3 measures have been introduced by \citealt{vecchi2011}), and (4) entropy, that is a measure of vector quality firstly introduced by \cite{lazaridoufish}.
 
@@ -118,7 +118,7 @@ As far as neighborhood density and entropy are concerned, both of them have been
 
 A (5) fifth semantic but non-compositional measure was introduced following \cite{lynott2001}, who employed Latent Semantic Analysis (LSA) to quantify the degree of similarity between the first and the second constituent of a compound. Here, we took the compound constituent vectors (e.g. the vectors of \emph{key} and \emph{word}) from the source semantic space (see \sectref{sec:vectors}) and simply computed their cosine similarity. This measure might be helpful in distinguishing between different compound classes, based on the evidence that in both theoretical linguistics (see \citealt{lieber5OHC}) and conceptual combination literature (see \citealt{wisniewski1996}) this factor has been considered as explanatory of different classes/interpretations.
 
-\subsection{Non-semantic variables}
+\subsection{Non-semantic variables}\largerpage
 
 In addition to the 5 semantic variables described above, we also included in our experiment a number of non-semantic control variables. For each compound and its constituent words we extracted word-form frequency from the source corpus (i.e., the number of times a word is encountered in the corpus in that exact form, regardless of its grammatical category). Compound frequency was calculated by summing the occurrences of the given compound in both solid and hyphenated orthographic form (\emph{blackboard} and \emph{black-board}, respectively). All frequency values, namely (6) compound frequency, (7) modifier frequency and (8) head frequency were subsequently log-transformed following standard practice in psycholinguistics \citep{brysbaert2018}.
 
