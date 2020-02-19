@@ -6,8 +6,6 @@
 
 \author{Gianina Iordăchioaia\affiliation{University of Stuttgart}\and Lonneke van der Plas\affiliation{University of Malta}\lastand Glorianna Jagfeld\affiliation{Lancaster University}}
 
-% \chapterDOI{} %will be filled in at production
-% \epigram{}
 
 \abstract{This paper is concerned with the compositionality of deverbal compounds such as \textit{budget assessment} in English. We present an interdisciplinary study on how the morphosyntactic properties of the deverbal noun head (e.g., \textit{assessment})  can predict the interpretation of the compound, as mediated by the syntactic-semantic relationship  between the non-head (e.g., \textit{budget}) and the head. 
 We start with \citeauthor{grimshaw:90}'s (\citeyear{grimshaw:90}) observation that deverbal nouns are ambiguous between compositionally interpreted argument structure nominals, which  inherit verbal structure and realize arguments (e.g., \textit{the} assessment \textit{of the budget by the government}), and more lexicalized result nominals,  which preserve no verbal properties or arguments (e.g., \textit{The} assessment \textit{is on the table.}). Our hypothesis is that deverbal compounds with argument structure nominal heads are fully compositional and, in our system, more easily predictable than those headed by result nominals, since their compositional make-up triggers an (unambiguous) object interpretation of the non-heads. Linguistic evidence gathered from corpora and human annotations, and evaluated with machine learning techniques supports this hypothesis. At the same time, it raises interesting discussion points on how different properties of the head contribute to the interpretation of the deverbal compound.}
@@ -131,8 +129,6 @@ However, if the DC is interpreted compositionally (in parallel to the verbal con
 \end{xlist}}
 \end{exe}
 
-
-% % % \todo{I inserted this subsection since \textbackslash paragraphs are not allowed}
 \subsection{Terminology}
  Before we introduce our research program, a few terminological clarifications are in order. The term \textit{compositionality} is often used without particular focus on the syntactic-semantic relationship between the parts of the complex expression, an aspect that is of crucial importance in our study. Natural Language Processing literature on (root) noun-noun compounds, for instance, occasionally speaks of \textit{compositionality ratings}, in which annotators evaluate how accessible the lexical meaning of the two nouns is in the overall meaning of the compound (see \sectref{sec:NLP:lit:compositional} for details and references). This notion of compositionality is similar to what we call \textit{lexico-semantic transparency} below.
 
@@ -384,32 +380,16 @@ The nouns were selected such that their base verbs present transitive uses, maki
 \caption{\label{tab:2:nouns}Samples of extracted deverbal nouns}
 \resizebox{\textwidth}{!}{\begin{tabular}{llllll}
 \lsptoprule  Frequency & \textit{-al} & \textit{-ance} & \textit{-(at)ion} & \textit{-ing} & \textit{-ment} \\ \midrule
-%&spending & production & enforcement & proposal & insurance\\
 High & approval & performance & protection & building & development \\
 & withdrawal & assistance & reduction & training  & movement \\
-%& bombing & construction & treatment & arrival & clearance\\
 & rental & surveillance & consumption & trafficking  & punishment \\
 \midrule
-% hearing & education & announcement & rehearsal & allowance\\
-% laundering & exploration & payment & removal & maintenance\\
-% testing & creation & imprisonment & disposal & resistance\\
-%funding & prevention & assessment & reversal & guidance\\
-% reading & registration & improvement & revival & attendance\\
 Medium  & renewal & assurance & supervision & killing  & deployment\\
-%& writing & destruction & replacement & burial & disturbance\\
  & survival & dominance & cultivation  & counseling & placement\\
-%& firing & deprivation & assignment & denial & acceptance\\
  & upheaval & tolerance & instruction & teaching  & adjustment\\
-%planting & examination & enrollment & dismissal & avoidance\\
-%breeding & evacuation & enrichment & appraisal & remittance\\
-%%growing & preservation & harassment & referral & acquaintance\\
-%breaking & authorization & recruitment & refusal & inheritance\\
-%learning & assassination & endorsement & deferral & resemblance\\
 \midrule
 Low & retrieval & defiance & demolition & weighting & reinforcement \\
-%&baking & anticipation & realignment & acquittal & reassurance\\
  & disapproval & endurance & expulsion & chasing  & empowerment\\
-%& measuring & obstruction & mistreatment & rebuttal & remembrance\\
  & dispersal & ignorance & deportation & mongering & abandonment\\ 
 \lspbottomrule
 \end{tabular}}
@@ -512,21 +492,10 @@ For example, we matched \emph{security training(s)}, but not \emph{airport secur
         \node[normal node, right=0.1 of 7] (8) {sales};
         \node[normal node, right=0.1 of 8] (9) {tax};
         \node[normal node, right=0.1 of 9] (10) {increase};
-        %\node[normal node, right=0.1 of 10] (11) {.};
-        % lemma
-        % POS %TODO remove all POS that are not relevant (except aounrd NN)
 		\node[normal node, below=0.1 of 1] (12) {VBP};
         \node[normal node, below=0.1 of 2] (13) {NN};
         \node[normal node, below=0.1 of 3] (14) {NN};
         \node[normal node, below=0.1 of 4] (15) {IN};
-        %\node[normal node, below=0.1 of 5] (16) {NN}; %TODO NNP?
-        %\node[normal node, below=0.1 of 6] (17) {IN};
-        %\node[normal node, below=0.1 of 7] (18) {DET};
-        %\node[normal node, below=0.1 of 8] (19) {NNS};
-        %\node[normal node, below=0.1 of 9] (20) {NN};
-        %\node[normal node, below=0.1 of 10] (21) {NN};
-		
-        % dependency
 		\draw[-{Triangle[]}, line width=.5] (10) to  [bend right=90, looseness=.3] node[above, font=\small]{\textit{prep\_of}} (3);
 		\end{tikzpicture}
 	%\subcaption{Compound + \textit{of-phrase}}
@@ -544,15 +513,10 @@ For example, we matched \emph{security training(s)}, but not \emph{airport secur
         \node[normal node, right=0.1 of 5] (6) {by};
         \node[normal node, right=0.1 of 6] (7) {women};
         \node[normal node, right=0.1 of 7] (8) {\dots};
-        % lemma
-        % POS %TODO remove all POS that are not relevant (except around NN)
 		\node[normal node, below=0.1 of 1] (12) {VBD};
         \node[normal node, below=0.1 of 2] (13) {NN};
         \node[normal node, below=0.1 of 3] (14) {NNS};
         \node[normal node, below=0.1 of 4] (15) {IN};
-        %\node[normal node, below=0.1 of 5] (16) {};
-        %\node[normal node, below=0.1 of 6] (17) {IN};
-        %\node[normal node, below=0.1 of 7] (18) {NNS};
 		
         % dependency
 		\draw[-{Triangle[]}, line width=.5] (6) to  [bend right=90, looseness=.5] node[above, font=\small]{\textit{prep\_by}} (3);
@@ -729,17 +693,12 @@ home building&100&\textsc{obj} & police building &20.0& \textsc{nobj}\\
 book reading&100& \textsc{obj} & temperature reading &40.0&\textsc{obj}\\
 ship breaking&93.3& \textsc{obj} & record breaking &40.0& \textsc{obj}\\
 science teaching&93.3&\textsc{obj} & church teaching &46.7& \textsc{nobj}\\
-%%novel writing &93.3&\textsc{obj} & food writing &46.7& \textsc{nobj}\\
 career counseling&93.3& \textsc{nobj}& telephone counseling &53.3& \textsc{nobj}\\
-%%troop deployment&86.7& \textsc{obj} & ground deployment &46.7& \textsc{nobj}\\
 slum clearance&80.0& \textsc{obj} & safety clearance &20.0& \textsc{nobj}\\
 body movement&80.0& \textsc{obj}& student movement &33.3& \textsc{nobj}\\
 nicotine withdrawal&80.0& \textsc{nobj} & summer withdrawal &33.3& \textsc{nobj}\\
-%%village demolition &80& \textsc{obj} & weekend demolition &46.7& \textsc{nobj}\\
 refuse disposal&80.0& \textsc{obj} & garbage disposal &46.7& \textsc{obj}\\
-%%campaign funding &80& \textsc{obj} & government funding &53.3& \textsc{nobj}\\
 temperature tolerance&73.3& \textsc{obj} & alcohol tolerance &20.0& \textsc{obj}\\
-%%downtown renewal &73.3& \textsc{obj} & permit renewal &40& \textsc{obj} \\
 cancer treatment&73.3& \textsc{obj} & spa treatment &46.7& \textsc{nobj}\\
 \lspbottomrule
 \end{tabular}}
@@ -755,7 +714,6 @@ The confusion matrix for the feature \textit{P-R} in Table~\ref{tab:conf:p-r} co
 \cmidrule(lr){3-4}
 &&  \textsc{obj}&\textsc{nobj}&Totals \\    
 \parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c] {90}{Gold}}} & \textsc{obj} &48 &18&66 \\
-% {Gold} & \textsc{obj} &48 &18&66 \\
 & \textsc{nobj}&13 & 53&66  \\
 % % \midrule
 &Totals&61 &71&132\\
@@ -809,7 +767,6 @@ The confusion matrix for the feature \textit{of\_outside\_DC} in Table~\ref{tab:
 \cmidrule(lr){3-4}
 &&  \textsc{obj}&\textsc{nobj}&Totals \\   
 \parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c] {90}{{Gold}}}} & \textsc{obj} &51 &15&66 \\
-% Gold & \textsc{obj} &51 &15&66 \\
 & \textsc{nobj}&38 & 28&66  \\
 &Totals&89 &43&132\\
 \lspbottomrule
