@@ -1,7 +1,1 @@
-{"versions": [{"versiontype": "proofreading",
-		"title": "The role of constituents in multiword expressions: An interdisciplinary, cross-lingual perspective",
-		"authors": [{"name": " Sabine Schulte im Walde"},{"name": "Eva Smolka"}],
-	"license": "CC-BY-4.0",
-	"publishedAt": "2019-05-15T11:15:00.000Z"}
-	]
-}
+{"versions": [{"authors": [{"name": " Sabine Schulte im Walde"}, {"name": "Eva Smolka"}], "title": "The role of constituents in multiword expressions: An interdisciplinary, cross-lingual perspective", "publishedAt": "2019-05-15T11:15:00.000Z", "license": "CC-BY-4.0", "versiontype": "proofreading"}, {"title": "The role of constituents in multiword expressions: An interdisciplinary, cross-lingual perspective", "versiontype": "first_edition", "license": "CC-BY-4.0", "publishedAt": "2020-02-25T11:18:34.629391", "authors": [{"name": " Sabine Schulte im Walde"}, {"name": "Eva Smolka"}]}]}
